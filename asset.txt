@@ -1,0 +1,2328 @@
+1,EUR/USD
+2,GBP/USD
+3,NZD/USD
+4,USD/CAD
+5,USD/JPY
+6,USD/CHF
+7,AUD/USD
+8,EUR/GBP
+9,EUR/CHF
+10,EUR/JPY
+11,GBP/JPY
+12,EUR/AUD
+13,EUR/CAD
+14,AUD/JPY
+15,CAD/JPY
+16,CHF/JPY
+17,Oil
+18,Gold
+19,Silver
+21,Copper
+22,Natural Gas
+25,US Dollar Index
+26,China A50 Index
+27,SPX500
+28,NSDQ100
+29,DJ30
+30,UK100
+31,FRA40
+32,GER30
+33,AUS200
+34,ESP35
+36,JPN225
+38,HKG50
+39,USD/HKD
+40,Platinum
+42,USD/ZAR
+43,EUSTX50
+44,USD/RUB
+45,USD/CNH
+46,AUD/CHF
+47,AUD/CAD
+48,AUD/NZD
+49,EUR/NZD
+50,GBP/AUD
+51,GBP/CHF
+52,GBP/NZD
+53,NZD/CAD
+54,NZD/CHF
+55,NZD/JPY
+56,CAD/CHF
+57,USD/NOK
+58,USD/SEK
+59,NOK/SEK
+60,EUR/NOK
+61,EUR/SEK
+62,USD/TRY
+63,USD/MXN
+64,USD/SGD
+65,GBP/CAD
+66,ZAR/JPY
+68,EUR/PLN
+69,USD/HUF
+70,EUR/HUF
+71,GBP/HUF
+72,CHF/HUF
+73,USD/PLN
+75,USD/DKK
+76,EUR/DKK
+94,Sugar Future Contract
+96,Cocoa Future Contract
+97,Wheat Future Contract
+98,Cotton Future Contract
+99,Aluminum
+100,Nickel
+1001,Apple
+1002,Alphabet
+1003,Facebook
+1004,Microsoft
+1005,Amazon
+1006,Altaba Inc
+1007,Zynga
+1008,Alcoa
+1009,American Express CO
+1010,Boeing
+1011,Bank of America Corp
+1012,Caterpillar
+1013,Cisco
+1014,Chevron
+1015,Du-Pont
+1016,Walt Disney
+1017,General Electric Co
+1018,Home Depot Inc
+1019,Hewlett Packard
+1020,IBM
+1021,Intel
+1022,Johnson & Johnson
+1023,JPMorgan Chase & Co
+1024,Coca-Cola
+1025,McDonalds
+1026,3M
+1027,Merck
+1028,Pfizer
+1029,Procter & Gamble Co
+1030,AT&T Inc
+1031,Travelers
+1032,UnitedHealth
+1033,United-Technologies
+1034,Verizon
+1035,Wal-Mart
+1036,Exxon-Mobil
+1037,Citigroup
+1038,Honda
+1039,HSBC
+1040,Manchester United
+1041,Mastercard
+1042,NIKE
+1043,PepsiCo
+1044,Sony
+1045,Toyota
+1046,Visa
+1047,Vodafone
+1048,Time-Warner
+1049,Deutsche-Bank
+1050,Colgate-Palmolive
+1051,eBay
+1053,Yandex NV
+1054,Qiwi Plc
+1055,China Mobile Limited
+1056,Renren Inc.
+1100,Telecom Argentina SA
+1101,Ternium SA
+1102,Petroleo Brasileiro SA Petrobras
+1103,Vale SA
+1104,Banco Santander SA (US)
+1105,Telefonica SA (US)
+1106,America Movil
+1107,Cemex
+1109,Grupo Televisa
+1111,Tesla Motors
+1112,Ford Motor Co
+1113,Las Vegas Sands Corp
+1115,Nokia Oyj
+1116,Potash Corporation of Saskatchewan
+1117,First Solar
+1118,Berkshire Hathaway Inc
+1119,Western Union Company
+1120,Gap
+1121,Ralph Lauren Corp
+1122,Harley-Davidson Inc
+1123,TripAdvisor Inc
+1124,Electronic Arts
+1125,Urban Outfitters Inc.
+1126,Adobe Systems Inc
+1127,Netflix
+1128,Motorola Solutions
+1129,Western Digital Corporation
+1130,Micron Technology
+1131,Abercrombie & Fitch Company
+1133,American Capital Agency Corp.
+1134,Autodesk
+1135,Oracle Corporation
+1136,Lockheed Martin Corporation
+1137,NVIDIA Corporation
+1138,FedEx Corporation
+1139,Noble Energy Inc
+1140,Avis Budget Group Inc
+1141,Baidu
+1142,Starbucks Corporation
+1143,Amgen Inc
+1144,Activision Blizzard
+1145,Check Point Software Technologies
+1146,Mosaic Co
+1148,Dr Pepper Snapple Group
+1149,Constellation Brands Inc.
+1153,Twitter
+1155,Alibaba
+1156,Spotify 
+1157,Dropbox Inc
+1159,Etsy Inc
+1160,Wix.com Ltd 
+1161,Ryanair Holdings plc
+1162,Delphi Technologies PLC
+1164,Aurora Cannabis Inc
+1165,Scotts Miracle-Gro Company
+1166,Cara Therapeutics 
+1167,Insys Therapeutics Inc
+1169,World Pay Inc
+1170,Zynerba Pharmaceuticals Inc
+1171,Corbus Pharmaceuticals Holding
+1172,Cronos Group Inc
+1173,Pattern Energy Group
+1174,Covanta Holdings
+1175,Enviva Partners LP
+1176,NextEra Energy Partners LP
+1177,Albemarle Corporation
+1178,EnerSys
+1179,Aphria Inc.
+1180,Xiaomi Corp
+1181,Overstock.com
+1182,Tilray
+1183,Lyft Inc.
+1184,Pinterest Inc
+1185,Levi Strauss & Co. 
+1186,Uber
+1187,Beyond Meat Inc.
+1200,Siemens Aktiengesellschaft
+1201,BASF SE
+1202,SAP AG
+1203,Bayer AG
+1204,Allianz SE
+1205,E.ON SE
+1206,Daimler AG
+1207,Deutsche Telekom AG
+1209,Linde Aktiengesellschaft
+1210,Volkswagen AG
+1211,Bayerische Motoren Werke Aktiengesellschaft
+1212,Muenchener Rueckvrschrng Gslchft AG Mnch
+1213,RWE AG
+1214,Fresenius Medical Care AG & Co. KGAA
+1215,Adidas AG
+1216,Deutsche Post AG
+1217,Fresenius SE & Co KGaA
+1218,Henkel AG & Co. KGaA
+1219,Deutsche Boerse AG
+1220,ThyssenKrupp AG
+1221,Infineon Technologies AG
+1222,K+S Aktiengesellschaft
+1223,Commerzbank AG
+1225,Beiersdorf AG
+1226,HeidelbergCement AG
+1227,Deutsche Lufthansa Aktiengesellschaft
+1228,Continental AG
+1231,Accor S.A.
+1232,Credit Agricole S.A.
+1233,Air Liquide SA
+1234,AIRBUS GROUP
+1235,Alstom SA
+1237,Danone
+1238,BNP Paribas SA
+1239,Carrefour SA
+1240,Cap Gemini S.A.
+1241,AXA Group
+1242,Vinci S.A
+1243,Electricite de France SA
+1244,Essilor International SA
+1245,Bouygues SA
+1246,TOTAL S.A.
+1247,Valeo SA
+1248,Societe Generale Group
+1249,Engie SA
+1250,Kering SA
+1252,Legrand SA
+1253,LVMH Moet Hennessy Louis Vuitton SA
+1254,Compagnie Generale DES Etablissements Michelin SCA
+1255,ArcelorMittal
+1256,LOreal SA
+1257,Orange
+1258,PUB
+1259,Pernod-Ricard SA
+1260,Renault 
+1261,SAF
+1262,Sanofi
+1263,Compagnie de Saint-Gobain S.A.
+1264,SOLVAY
+1265,Schneider Electric SE
+1267,Peugeot S.A.
+1268,Unibail Rodamco
+1269,Veolia Environnement S.A.
+1270,Vivendi
+1271,A2A Group
+1272,Autogrill
+1273,Atlantia Develops
+1274,Azimut Holding
+1277,BPER Banca
+1278,Buzzi Unicem Group
+1279,CNH Industrial Group
+1280,Davide Campari - Milano Beverage
+1282,Enel Power Company
+1283,Eni Energy Company
+1284,Exor Investment Company
+1285,Fiat Chrysler Automobiles
+1286,Leonardo Finmeccanica
+1287,Generali Group
+1288,Intesa Sanpaolo Group
+1289,Luxottica Group
+1290,Mediobanca Investment Bank
+1292,Moncler
+1293,Mediaset Group
+1296,Prysmian Group
+1297,Salvatore Ferragamo Company
+1299,Snam Group
+1300,STMicroelectronics Company
+1301,Ansaldo STS Company
+1302,Tenaris Group
+1303,Telecom Italia Group
+1304,Tods Group
+1305,TERNA Eectricity Group
+1306,UBI Banca Group
+1307,UniCredit Commercial Bank
+1308,UnipolSai multi-business insurance company
+1310,Yoox Net-A-Porter Group
+1311,Abertis
+1313,ACS
+1314,Amadeus IT Hold -A-
+1315,Acciona
+1316,BBVA
+1317,Bankia S.A
+1318,Bankinter
+1319,Bolsas Y Mercados
+1320,Caixabank
+1321,DIA S.A.
+1322,Endesa
+1323,Enagas
+1324,Fomento de Construcciones
+1325,Ferrovial
+1326,Siemens Gamesa Renewable Energy SA
+1327,Naturgy Energy Group
+1328,Grifols A
+1330,Iberdrola
+1331,Indra Sistemas A
+1332,Inditex
+1334,Mapfre
+1336,OHL
+1338,Red Electrica Corp
+1339,Repsol
+1340,Banco Sabadell
+1342,Sacyr
+1344,Mediaset Espana
+1345,Tecnicas Reunidas
+1346,Gazprom OAO
+1349,Lukoil OAO
+1350,Magnit PJSC
+1352,MMC Norilsk Nickel OJSC
+1353,NOVATEK OAO
+1357,Rosneft OAO
+1358,Sberbank of Russia
+1359,Severstal PAO
+1360,Surgutneftegas OAO
+1361,Tatneft OAO
+1370,Jumei Intl Holdings
+1377,NetEase
+1378,JD.com
+1379,Ctrip.com
+1380,Autohome
+1382,51Job
+1385,Global Sources
+1387,MOMO Inc ADR
+1388,Take Two Interactive Software Inc
+1400,Nestle SA
+1402,Roche Holding Ltd
+1403,Credit Suisse Group AG
+1404,ABB LTD
+1405,Adecco Group AG
+1406,Actelion Ltd
+1407,Julius Baer Gruppe AG
+1408,Compagnie Financiere Richemont SA
+1409,Geberit AG
+1410,Givaudan S.A
+1411,Lafargeholcim Ltd
+1412,Swisscom AG
+1413,SGS SA
+1414,Swiss Life Holding AG
+1415,Swiss Re AG
+1416,Syngenta AG
+1417,UBS Group AG
+1418,The Swatch Group SA - B Shares
+1419,Zurich Insurance Group Ltd
+1450,Accenture PLC
+1451,American Airlines Group Inc
+1452,AbbVie Inc
+1454,Biogen Inc
+1457,CBS Corp
+1458,Celgene Corp
+1459,Comcast Corp
+1460,Capital One Financial Corp
+1461,Costco Wholesale Corp
+1462,CVS Health Corp
+1464,Twenty-First Century Fox Inc
+1465,Gilead Sciences Inc
+1466,GoPro Inc
+1467,Goldman Sachs Group Inc
+1469,Honeywell International Inc
+1472,Kellogg Co
+1473,Capri Holdings Ltd
+1474,Lowes Companies Inc
+1475,Macys Inc
+1476,McKesson Corp
+1477,Medtronic PLC
+1478,Metlife Inc
+1481,Booking Holdings Inc
+1482,Philip Morris International Inc
+1483,Phillips 66
+1484,PayPal Holdings
+1485,Qualcomm Inc
+1486,Royal Dutch Shell
+1487,Sprint Corporation
+1488,Shake Shack Inc
+1490,Target Corp
+1491,Tata Motors
+1492,Union Pacific Corp
+1493,United Parcel Service Inc
+1494,Walgreens Boots Alliance Inc
+1495,Wells Fargo & Co
+1496,Williams Companies Inc
+1497,Valero Energy Corp
+1498,AmerisourceBergen Corp
+1499,First Bancorp Inc Maine
+1500,Kroger Co
+1501,General Motors Co
+1502,Express Scripts Holding Co
+1503,Marathon Petroleum Corporation
+1504,Cardinal Health Inc
+1505,Anthem Inc
+1506,FMC Corp
+1507,American International Group Inc
+1508,Dow Chemical Co
+1509,Aetna Inc
+1510,ConocoPhillips Co
+1511,Energy Transfer Equity LP
+1512,Humana Inc
+1513,Enterprise Products Partners LP
+1514,Sysco Corp
+1516,Johnson Controls Inc
+1517,Plains GP Holdings LP
+1518,World Fuel Services Corp
+1520,Best Buy Co Inc
+1521,Delta Air Lines Inc (DE)
+1522,HCA Holdings Inc
+1523,Andeavor
+1524,United Continental Holdings Inc
+1525,Tyson Foods Inc
+1526,Deere & Co
+1527,Allstate Corp
+1528,Cigna Corp
+1529,Mondelez International Inc
+1530,Intl FCStone Inc
+1531,Halliburton Co
+1533,Sears Holdings Corp
+1534,General Dynamics Corp
+1535,TJX Companies Inc
+1536,Tech Data Corp
+1537,Avnet Inc
+1538,Exelon Corp
+1539,International Paper Co
+1540,Qurate Retail Group inc
+1541,Duke Energy Corp
+1542,Rite Aid Corp
+1544,Emerson Electric Co
+1545,Northrop Grumman Corp
+1546,National Oilwell Varco Inc
+1547,Raytheon Co
+1549,Arrow Electronics Inc
+1550,Aflac Inc
+1551,Staples Inc
+1552,Abbott Laboratories
+1553,Community Health Systems Inc
+1554,Fluor Corp
+1555,Freeport-McMoRan Inc
+1556,US Bancorp
+1557,Nucor Corp
+1558,Kimberly-Clark Corp
+1559,Hess Corp
+1560,Chesapeake Energy Corp
+1561,Xerox Corp
+1562,Manpower Inc
+1563,Danaher Corp
+1564,Whirlpool Corp
+1565,PBF Energy Inc
+1566,HollyFrontier Corp
+1567,Eli Lilly & Co
+1568,Devon Energy Corp
+1569,Progressive Corp
+1570,Cummins Inc (Ex. Cummins Engine Inc)
+1571,Icahn
+1573,Kohls Corp
+1574,Paccar Inc
+1575,The Hartford Financial Services Group Inc
+1576,Southwest Airlines Co
+1577,Anadarko Petroleum Corp
+1578,Southern Co
+1579,Supervalu Inc
+1580,Goodyear Tire & Rubber Co
+1581,EOG Resources Inc
+1582,CenturyLink Inc
+1583,Altria Group Inc
+1584,Tenet Healthcare Corp
+1585,General Mills Inc
+1586,ConAgra Foods Inc
+1587,Lear Corp
+1588,United States Steel Corp
+1589,Penske Automotive Group Inc
+1590,AES Corp
+1591,Global Partners LP
+1592,Thermo Fisher Scientific Inc
+1593,PG&E Corp
+1594,NextEra Energy Inc
+1595,American Electric Power Inc
+1596,Baxter International Inc
+1597,Centene Corp
+1598,Bank of New York Mellon Corp
+1599,Jabil Circuit Inc
+1600,PNC Financial Services Group Inc
+1601,Kinder Morgan Inc
+1602,Office Depot Inc
+1603,Bristol-Myers Squibb Co
+1604,NRG Energy Inc
+1605,Monsanto Co
+1606,PPG Industries Inc
+1607,Genuine Parts Co
+1608,Omnicom Group Inc
+1609,Illinois Tool Works Inc
+1610,Murphy USA Inc
+1612,FirstEnergy Corp
+1613,Aramark
+1614,DISH Network Corp
+1615,Loews Corp
+1616,Ecolab Inc
+1617,Whole Foods Market Inc
+1618,Chubb Corp
+1620,Waste Management Inc
+1621,Apache Corp
+1622,Textron Inc
+1623,Synnex Corp
+1625,Viacom Inc
+1626,Lincoln National Corp
+1627,Nordstrom Inc
+1628,C.H.Robinson Worldwide Inc
+1629,Edison International
+1630,Yum Brands Inc
+1631,Parker-Hannifin Corp
+1632,DaVita HealthCare Partners Inc
+1633,CarMax Inc
+1634,Texas Instruments Inc
+1635,Wellcare Health Plans Inc
+1636,Marsh & McLennan Cos Inc
+1637,Consolidated Edison Inc
+1638,ONEOK Inc (New)
+1639,Jacobs Engineering Group Inc
+1640,CSX Corp
+1641,Entergy Corp
+1642,Dominion Resources Inc
+1643,Jefferies Financial Group Inc
+1644,Ameriprise Financial Inc
+1645,VF Corp
+1646,Praxair Inc
+1647,JC Penney Co Inc
+1648,Automatic Data Processing Inc
+1649,L-3 Communications Holdings Inc
+1650,CDW Corp (New)
+1651,Xcel Energy Inc
+1652,Norfolk Southern Corp
+1653,PPL Corp
+1654,R.R.Donnelley & Sons Co
+1655,Huntsman Corp
+1656,Bed Bath & Beyond Inc
+1657,Stanley Black & Decker Inc
+1658,L Brands Inc
+1660,Sherwin-Williams Co
+1661,BlackRock Inc
+1663,Ross Stores Inc
+1664,Sempra Energy
+1665,Estee Lauder Companies Inc
+1666,Reinsurance Group America Inc
+1667,Public Service Enterprise Group Inc
+1669,Navistar International Corp
+1671,State Street Corp
+1672,Unum Group
+1673,Hilton Worldwide Holdings Inc
+1674,Principal Financial Group Inc
+1675,Reliance Steel And Aluminum Co
+1676,Air Products & Chemicals Inc
+1677,Assurant Inc
+1678,Henry Schein Inc
+1679,Cognizant Technology Solutions Corp
+1680,MGM Resorts International
+1681,WW Grainger Inc
+1682,Group 1 Automotive Inc
+1683,BB&T Corp
+1684,Advance Auto Parts Inc
+1685,Ally Financial Inc
+1686,AGCO Corp
+1687,Corning Inc
+1689,Stryker Corp
+1690,Molina Healthcare Inc
+1692,Discover Financial Services
+1693,Genworth Financial Inc
+1694,Eastman Chemical Co
+1695,Dean Foods Co
+1696,Autozone Inc
+1697,Owens & Minor Inc
+1698,Hormel Foods Corp
+1699,GameStop Corp New
+1700,Centerpoint Energy Inc
+1701,Fidelity National Financial Inc
+1702,Sonic Automotive Inc
+1703,HD Supply Holdings Inc
+1704,Charter Communications Inc
+1705,Crown Holdings Inc
+1706,Applied Materials Inc
+1707,CBRE Group Inc
+1708,Avon Products Inc
+1709,Republic Services Inc
+1710,Universal Health Services Inc
+1711,Darden Restaurants Inc
+1712,Steel Dynamics Inc
+1713,Suntrust Banks Inc
+1714,Caesars Entertainment Corp
+1715,Targa Resources Corp
+1716,Dollar Tree Inc
+1717,News Corp
+1718,Ball Corp
+1719,Masco Corp
+1720,Franklin Resources Inc.
+1722,Becton Dickinson & Co.
+1725,Campbell Soup Co
+1726,AECOM
+1727,Visteon Corp
+1728,Delek US Holdings Inc
+1729,Dover Corp
+1730,BorgWarner Inc
+1732,UGI Corp
+1733,Murphy Oil Corp
+1734,PVH Corp
+1735,Core-Mark Holding Company Inc
+1736,Calpine Corp
+1737,D.R. Horton Inc
+1738,Weyerhaeuser Co
+1739,KKR & Co LP
+1740,TechnipFMC Plc
+1741,SpartanNash Company
+1742,WESCO International Inc
+1743,Quanta Services Inc
+1744,Mohawk Industries Inc
+1745,Lennar Corp
+1746,TravelCenters of America LLC
+1747,Sealed Air Corp
+1748,Eversource Energy
+1749,Coca-Cola Enterprises Inc
+1750,Ashland Inc
+1751,Interpublic Group of Companies Inc
+1752,BlackStone Group LP
+1753,Quest Diagnostics Inc
+1757,Newmont Mining Corp
+1758,OReilly Automotive Inc
+1759,Caseys General Stores Inc
+1760,CMS Energy Corp
+1761,Foot Locker Inc
+1763,Commercial Metals Co
+1764,Agilent Technologies Inc
+1765,Huntington Ingalls Industries Inc
+1766,Live Nation Entertainment Inc
+1767,Dicks Sporting Goods Inc
+1768,Oshkosh Corp
+1769,Celanese Corp
+1770,Spirit AeroSystems Holdings Inc
+1771,United Natural Foods Inc
+1773,Owens-Illinois Inc
+1774,Dillards Inc
+1775,Level 3 Communications Inc
+1776,LKQ Corp
+1777,Symantec Corp
+1778,Buckeye Partners L P
+1779,Ryder System Inc
+1780,Rockwell Automation Inc
+1781,Dana Holding Corp
+1782,NCR Corp
+1783,Expeditors International of Washington
+1785,Ak Steel Holding Corp
+1786,Fifth Third Bancorp
+1788,Nisource Inc
+1790,Anixter International Inc
+1791,Emcor Group Inc
+1792,Fidelity National Information Services Inc
+1793,Barnes & Noble Inc
+1794,KBR Inc
+1795,Avery Dennison Corp
+1796,NetApp Inc
+1798,Discovery Communications Inc
+1799,Sanmina Corp
+1801,J.B.Hunt Transport Services Inc
+1802,Charles Schwab Corp
+1803,Ameren Corp
+1804,Mattel Inc
+1805,Laboratory Corp Of America Holdings
+1807,General Cable Corp
+1808,Albany Molecular Research Inc
+1809,Spectrum Brands Holdings Inc.
+1812,Asbury Automotive Group Inc
+1813,Packaging Corp of America
+1815,PulteGroup Inc
+1816,JetBlue Airways Corp
+1817,Newell Rubbermaid Inc
+1819,Calumet Specialty Products Partners LP
+1820,Expedia Inc Del
+1821,American Financial Group Inc
+1822,United Rentals Inc
+1823,Ingredion Inc
+1824,Navient Corp
+1827,JM Smucker Co
+1828,Clorox Co
+1831,Old Republic International Corp
+1832,Advanced Micro Devices Inc
+1833,Booz Allen Hamilton Holding Corp
+1834,IQVIA Holdings Inc.
+1835,Wynn Resorts Ltd
+1836,Jones Lang Lasalle Inc
+1837,Regions Financial Corp
+1838,Lithia Motors Inc
+1839,Salesforce.com Inc
+1840,Alaska Air Group Inc
+1841,Host Hotels & Resorts Inc
+1843,Amphenol Corporation (New)
+1844,Realogy Holdings Corp
+1845,Essendant Inc
+1846,Hanesbrands Inc
+1847,Kindred Healthcare Inc
+1848,ARRIS Group Inc
+1850,LifePoint Health Inc
+1851,Pioneer Natural Resources Company
+1852,Wyndham Destinations Inc
+1853,Owens Corning Inc
+1854,Alleghany Corp
+1855,S&P Global Inc
+1856,Big Lots Inc
+1858,Markel Corp
+1859,Leidos Holdings Inc
+1860,Rockwell Collins Inc
+1864,The Hanover Insurance Group Inc
+1865,Fiserv Inc
+1866,ABM Industries Inc
+1867,Sonoco Products Co
+1868,Harris Corp
+1870,Wisconsin Energy Corp
+1872,Raymond James Financial Inc
+1873,Berry Plastics Group Inc
+1874,SCANA Corp
+1875,Cincinnati Financial Corp
+1876,Atmos Energy Corp
+1878,Flowserve Corp
+1879,Simon Property Group Inc
+1881,Burlington Stores Inc
+1882,Bemis Co Inc
+1883,Tapestry
+1884,Continental Resources Inc
+1885,Ascena Retail Group Inc
+1886,Zillow Group Inc
+1887,Orbital ATK Inc
+1888,Frontier Communications Corporation
+1890,CF Industries Holdings Inc
+1891,The Michaels Companies Inc
+1892,M&T Bank Corporation
+1893,Rush Enterprises Inc
+1895,Superior Energy Services Inc
+1896,Williams-Sonoma Inc
+1897,Robert Half International Inc
+1898,First American Financial Corp
+1900,MDU Resources Group Inc
+1901,Juniper Networks Inc
+1902,Arthur J.Gallagher & Co
+1903,Colfax Corp
+1905,MasTec Inc
+1906,Lam Research Corp
+1909,Cintas Corp
+1910,Coty Inc
+1911,Andersons Inc
+1913,Northern Trust Corp
+1914,Intuit Corp
+1915,Tutor Perini Corp
+1916,Polaris Industries Inc
+1917,Ferrari NV
+1918,NVR Inc
+1919,Liberty Media Formula One Corp A
+1920,Energizer Holdings Inc
+1921,Bloomin Brands Inc
+1922,Westlake Chemical Corp
+1923,Hyatt Hotels Corp
+1925,Envision Healthcare Holdings Inc
+1926,Fortune Brands Home & Security Inc
+1927,RPM International Inc
+1928,VWR Corp
+1930,KeyCorp
+1931,Knight Transportation Inc
+1932,Allergan PLC
+1933,Hasbro Inc
+1934,Resolute Forest Products Inc
+1935,Tiffany & Co
+1936,McCormick & Co Inc
+1937,Graphic Packaging Holding Co
+1938,Greif Inc
+1939,Allegheny Technologies Inc
+1941,Molson Coors Brewing Co
+1943,CNO Financial Group Inc
+1945,Chipotle Mexican Grill Inc
+1946,American Tower Corp
+1948,AmTrust Financial Services Inc
+1949,Brunswick Corp
+1950,Patterson Companies Inc
+1951,Southwestern Energy Co
+1952,AMETEK Inc (New)
+1953,T Rowe Price Group Inc
+1954,Globe Life Inc
+1955,Darling Ingredients Inc
+1956,Leggett & Platt Inc
+1957,Watsco Inc
+1959,Xylem Inc
+1960,Silgan Holdings Inc
+1961,Toll Brothers Inc
+1962,Manitowoc Co Inc
+1963,Argo Group
+1965,GNC Holdings Inc
+1966,Marriott International Inc
+1967,Square
+1968,Match Group
+1969,SolarEdge Technologies
+1970,Fitbit
+1971,Nintendo CO Ltd
+1972,Regeneron Pharmaceuticals
+1973,Sangamo Biosciences Inc
+1974,Intellia Therapeutics Inc
+1975,Editas Medicine Inc
+1976,Morgan Stanley
+1977,Cellectis SA
+1978,Hermes International
+1979,Snapchat Inc
+2000,Anglo American
+2001,Associated British Foods
+2002,Admiral Group
+2003,Aberdeen Asset Management
+2004,Aggreko
+2005,Ashtead Group
+2006,Amec Foster Wheeler Plc
+2007,Antofagasta
+2009,Aviva
+2010,AstraZeneca
+2012,Babcock International
+2013,Barclays
+2014,British American Tobacco
+2016,British Land
+2017,BHP Billiton
+2018,Bunzl
+2019,BP
+2020,Burberry Group
+2021,Sky PLC
+2022,BT Group
+2023,Coca Cola Hellenic
+2024,Carnival
+2025,Centrica
+2026,Compass Group
+2027,Capita
+2029,Diageo
+2030,Experian
+2031,easyJet
+2032,Fresnillo
+2033,G4S
+2034,GKN
+2035,Glencore Plc
+2036,GlaxoSmithKline
+2037,Hargreaves Lansdown
+2038,Hammerson
+2039,HSBC Holdings
+2040,International Consolidated Airlines
+2042,IMI
+2043,Imperial Brands PLC
+2044,Intertek Group
+2045,ITV
+2046,Johnson Matthey
+2047,Kingfisher
+2048,Land Securities
+2049,Legal & General
+2050,Lloyd's
+2051,London Stock Exchange
+2052,Meggitt
+2053,Marks & Spencer
+2054,Mondi
+2055,Melrose Industries
+2056,Morrisons
+2057,National Grid
+2058,Next
+2059,Old Mutual
+2060,Petrofac
+2061,Prudential
+2062,Persimmon
+2063,Pearson
+2064,Reckitt Benckiser
+2065,Royal Bank of Scotland
+2068,RELX PLC
+2070,Rio Tinto
+2071,Royal Mail
+2072,Rolls-Royce
+2073,Randgold Resources
+2074,RSA Insurance
+2077,Sainsbury (J)
+2078,Schroders
+2080,Shire
+2081,Standard Life Aberdeen PLC
+2082,Smiths Group
+2083,Smith & Nephew
+2084,Sports Direct
+2085,SSE
+2086,Standard Chartered
+2087,Severn Trent
+2088,Tate & Lyle
+2089,Tullow Oil
+2090,Travis Perkins
+2091,Tesco
+2093,Unilever
+2094,United Utilities
+2096,Weir Group
+2097,William Hill
+2098,Ferguson PLC
+2099,WPP
+2100,Whitbread
+2101,Daily Mail plc
+2102,3i Group PLC
+2151,Barratt Developments
+2152,Croda International
+2153,DCC PLC
+2154,Direct Line Group
+2155,Informa
+2156,Micro Focus International PLC
+2157,Paddy Power Betfair
+2158,Rentokil Initial PLC
+2159,Segro
+2160,Smurfit Kappa Group
+2161,Scottish Mortgage Investment Trust
+2163,TUI AG
+2164,Taylor Wimpey
+2165,Quilter PLC
+2166,Mediclinic International PLC
+2167,Aston Martin Lagonda Global Holdings PLC
+2168,Fevertree Drinks PLC
+2169,ASOS PLC
+2171,Royal Dutch Shell B
+2172,Ryanair Holdings PLC
+2173,Avast PLC
+2175,Samsung Electronics Co Ltd
+2176,Trainline PLC
+2211,Aker Solutions
+2212,BW LPG
+2213,DNB
+2214,DNO International
+2215,Fred. Olsen Energy
+2216,Gjensidige Forsikring
+2217,Golden Ocean Group
+2218,Marine Harvest
+2219,Norsk Hydro
+2220,Norwegian Air Shuttle
+2222,Orkla
+2223,Petroleum Geo-Services
+2224,Prosafe
+2226,Storebrand
+2227,Subsea 7
+2228,Telenor
+2229,TGS-NOPEC
+2230,Yara International
+2231,Ericsson
+2232,Telia Company AB
+2233,Nordea Bank AB
+2234,Volvo AB ser. A
+2235,Skandinaviska Enskilda Banken ser. A
+2236,Sandvik AB
+2237,Hennes & Mauritz AB
+2239,Svenska Handelsbanken ser. A
+2240,SKF
+2241,Swedbank AB ser A
+2242,ASSA ABLOY AB ser. B
+2243,Atlas Copco AB ser. A
+2244,Boliden AB
+2246,Alfa Laval AB
+2248,Securitas AB ser. B
+2249,Skanska AB ser. B
+2250,Investor AB ser. A
+2251,Lundin Petroleum AB
+2252,Trelleborg AB ser. B
+2253,Swedish Match AB
+2254,Hexagon AB ser. B
+2256,ICA Gruppen AB
+2257,Industrivärden
+2258,Lundbergföretagen AB
+2260,Novo Nordisk B A/S
+2261,Danske Bank A/S
+2262,Orsted A/S
+2263,Vestas Wind Systems A/S
+2264,Novozymes B A/S
+2265,Pandora A/S
+2266,Tryg A/S
+2267,DSV A/S
+2268, Demant A/S
+2269,ISS A/S
+2270,H. Lundbeck A/S
+2271,Genmab A/S
+2272,Coloplast B A/S
+2274,Chr. Hansen Holding A/S
+2277,Nordea Bank AB 
+2278,SSAB AB ser. A
+2280,Fortum Oyj
+2281,UPM-Kymmene Oyj
+2282,Neste Oyj
+2283,KONE Oyj
+2284,Sampo Oyj A
+2285,Elisa Oyj
+2286,Nokian Renkaat Oyj
+2287,Wärtsilä Oyj Abp
+2300,China Construction Bank
+2301,Bank of China
+2302,Industrial And Commercial Bank of China
+2303,Agricultural Bank of China
+2304,Sinopec
+2305,Cnooc
+2306,Country Garden
+2307,China Citic Bank
+2308,Minsheng Bank
+2309,Peoples Insurance Company (Group) of China
+2310,China National Building Material
+2311,China Cinda Asset Management Co Ltd
+2312,Lenovo Group
+2313,China Shenhua
+2314,Yanzhou Coal
+2315,China Communications Construction
+2316,Ping An Insurance
+2317,GCL-Poly Energy
+2318,Huaneng Power International Inc (HK)
+2319,Picc Property And Casualty
+2320,China Unicom HK
+2321,China Telecom
+2322,CGN Power Co Ltd
+2323,Zijin Mining
+2324,China Life Insurance (HK)
+2325,China Coal Energy
+2326,Li & Fung Ltd
+2327,Bank of Communications
+2328,Air China
+2329,Xinyi Solar Holdings Ltd
+2330,China Overseas Land & Investment
+2331,Great Wall Motor
+2332,China Oilfield
+2333,China Longyuan
+2334,AIA Group Ltd
+2335,China Railway Group
+2336,Weichai Power
+2337,China Pacific Insurance
+2338,China Merchants Bank
+2339,Tencent
+2340,Guangzhou Automobile
+2341,China SCE Property Holdings Ltd
+2342,China Mobile
+2343,Dongfeng Motor Group
+2344,CITIC Securities Co Ltd
+2345,Yuzhou Properties Co Ltd
+2346,Anhui Conch
+2347,Fosun International
+2348,Metallurgical Corporation of China
+2349,China Resources Land
+2350,China Railway Construction
+2351,CK Hutchison Holdings Ltd
+2352,CLP Holdings Ltd
+2353,Power Assets Holdings Ltd
+2354,Hang Seng Bank Ltd
+2355,Sun Hung Kai Properties Ltd
+2356,New World Development Co Ltd
+2357,Swire Pacific Ltd
+2358,Galaxy Entertainment Group Ltd
+2359,Kunlun Energy Co Ltd
+2360,Geely Automobile Holdings Ltd
+2361,Alibaba Health Information Tec
+2362,China Everbright International
+2363,Kingdee International Software
+2364,BYD Electronic International
+2365,Tingyi Cayman Islands Holding
+2366,China Gas Holdings Ltd
+2367,Hong Kong Exchanges & Clearing
+2368,ZTE Corp
+2369,China Tower Corp Ltd
+2370,PetroChina Co Ltd
+2371,SJM Holdings Ltd
+2372,China Taiping Insurance Holdin
+2373,Semiconductor Manufacturing
+2374,China Southern Airlines Co Ltd
+2375,CSPC Pharmaceutical Group Ltd
+2376,CK Asset Holdings Ltd
+2377,Brilliance China Automotive
+2378,Wynn Macau Ltd
+2379,Sino Biopharmaceutical Ltd
+2380,BYD Co Ltd
+2381,New China Life Insurance Co Ltd
+2382,Sands China Ltd
+2383,AAC Technologies Holdings Inc
+2384,ANTA Sports Products Ltd
+2385,Shanghai Fosun Pharmaceutical
+2386,Wuxi Biologics Cayman Inc
+2387,Shenzhou International Group
+2388,China Mengniu Dairy Co Ltd
+2389,Sunny Optical Technology Group
+2390,Sinopec Engineering Group Co
+2391,BOC Hong Kong Holdings Ltd
+2392,ENN Energy Holdings Ltd
+2393,China Evergrande Group
+2394,Meituan Dianping
+2395,China International Capital Co
+2396,China Molybdenum Co Ltd
+2397,ZhongAn Online P&C Insurance
+2398,Haitong Securities Co Ltd
+2399,Haidilao International Holding
+2400,China Galaxy Securities Co Ltd
+2401,Huatai Securities Co Ltd
+2402,Alibaba Group Holding Ltd (Hong Kong)
+2500,Heidelberger Druckmaschinen AG
+2501,AIXTRON
+2502,Telefonica Deutschland Holding AG
+2503,Ceconomy St
+2504,EVOTEC
+2505,KION GROUP
+2506,Schaeffler
+2508,Uniper
+2509,Nordex
+2510,SGL Carbon
+2511,Evonik
+2512,Deutsche Wohnen
+2513,LANXESS
+2514,QIAGEN
+2515,Dialog Semiconductor
+2516,Covestro
+2518,GEA
+2519,Rocket Internet
+2520,Wirecard
+2521,Zalando
+2522,Suedzucker
+2523,Grand City Properties
+2524,TAG Immobilien
+2525,Gerresheimer
+2526,freenet
+2527,Bilfinger
+2528,alstria office REIT-AG
+2529,Salzgitter
+2530,Brenntag
+2531,Aareal Bank
+2532,PATRIZIA AG
+2533,United Internet
+2534,LEONI
+2535,Siltronic
+2536,Symrise
+2537,RTL
+2538,Software
+2539,STADA
+2540,Deutsche Euroshop
+2541,Hella
+2542,Hapag-Lloyd
+2543,ElringKlinger
+2544,OSRAM
+2545,HUGO BOSS
+2546,MorphoSys
+2547,Drillisch
+2548,CTS Eventim
+2550,Siemens Healthineers AG
+2551,Vonovia SE
+2552,Innogy SE
+2553,Hannover Rueck SE
+2554,Knorr-Bremse AG
+2555,Sartorius AG
+2556,MTU Aero Engines AG
+2557,HOCHTIEF AG
+2558,Talanx AG
+2559,Aroundtown SA
+2560,Carl Zeiss Meditec AG
+2561,LEG Immobilien AG
+2562,Fraport AG Frankfurt Airport S
+2563,Rational AG
+2564,Delivery Hero SE
+2565,DWS Group GmbH & Co KGaA
+2566,Nemetschek SE
+2567,METRO AG
+2568,Fielmann AG
+2569,Scout24 AG
+2570,Axel Springer SE
+2571,Wacker Chemie AG
+2572,GRENKE AG
+2573,SIXT SE
+2575,Bechtle AG
+2577,ProSiebenSat.1 Media SE
+2578,Stroeer SE & Co KGaA
+2579,CompuGroup Medical SE
+2580,TLG Immobilien AG
+2581,Krones AG
+2582,Duerr AG
+2583,ADO Properties SA
+2585,Aurubis AG
+2586,PUMA AG
+2587,Rheinmetall AG
+2588,Voestalpine AG
+2590,Jenoptik
+2591,Jungheinrich Aktie
+2600,Hill & Smith Holdings PLC
+2601,Morgan Advanced Materials PLC
+2602,Coats Group PLC
+2603,Dechra Pharmaceuticals PLC
+2604,Marshalls PLC
+2605,Howden Joinery Group PLC
+2606,Intu Properties PLC
+2607,Senior PLC
+2609,OneSavings Bank PLC
+2610,Spectris PLC
+2611,Spirax-Sarco Engineering PLC
+2612,TP ICAP PLC
+2613,James Fisher & Sons PLC
+2614,Balfour Beatty PLC
+2615,Cobham PLC
+2616,Rightmove PLC
+2617,SIG PLC
+2618,Synthomer PLC
+2619,Hays PLC
+2621,RIT Capital Partners PLC
+2622,UNITE Group PLC
+2623,DS Smith PLC
+2624,Hunting PLC
+2625,Hastings Group Holdings PLC
+2626,Bodycote PLC
+2627,John Laing Group PLC
+2628,Hansteen Holdings PLC
+2629,Essentra PLC
+2630,IG Group Holdings PLC
+2631,Dignity PLC
+2632,Rank Group PLC
+2633,Renishaw PLC
+2634,Playtech Plc
+2635,Crest Nicholson Holdings plc
+2636,Redrow PLC
+2637,Drax Group PLC
+2638,BBA Aviation PLC
+2639,Computacenter PLC
+2640,Sophos Group PLC
+2641,Stobart Group Ltd
+2642,Inmarsat PLC
+2643,Derwent London PLC
+2644,Restaurant Group PLC
+2645,BMO Commercial Property Trust Ltd
+2647,Polymetal International PLC
+2648,IWG PLC
+2649,Perpetual Income and Growth Investment T
+2650,Capital & Counties Properties PLC
+2651,Grafton Group PLC
+2652,Temple Bar Investment Trust PLC
+2653,Clarkson PLC
+2654,Greggs PLC
+2655,Elementis PLC
+2656,Rathbone Brothers PLC
+2657,Pagegroup PLC
+2658,Savills PLC
+2659,Phoenix Group Holdings
+2660,Stagecoach Group PLC
+2661,Ultra Electronics Holdings PLC
+2662,National Express Group PLC
+2663,Ascential PLC
+2664,Centamin PLC
+2665,LondonMetric Property PLC
+2666,Auto Trader Group PLC
+2667,Alliance Trust PLC
+2668,esure Group PLC
+2670,Hochschild Mining PLC
+2671,Acacia Mining PLC
+2672,John Wood Group PLC
+2674,Polypipe Group plc
+2675,Jardine Lloyd Thompson Group PLC
+2676,Hikma Pharmaceuticals PLC
+2677,Fidessa Group PLC
+2679,Dixons Carphone PLC
+2680,HICL Infrastructure Co Ltd
+2682,FDM Group Holdings PLC
+2683,Cineworld Group PLC
+2684,Rotork PLC
+2685,Berkeley Group Holdings PLC
+2686,Renewables Infrastructure Group Ltd
+2687,Evraz PLC
+2688,Ibstock PLC
+2689,Man Group PLC
+2690,Millennium & Copthorne Hotels PLC
+2691,Northgate PLC
+2692,Virgin Money Holdings UK PLC
+2693,Hiscox Ltd
+2694,Ferrexpo PLC
+2695,Vesuvius PLC
+2696,Greene King PLC
+2697,UK Commercial Property Trust Ltd
+2698,Lancashire Holdings Ltd
+2699,St Modwen Properties PLC
+2700,PZ Cussons PLC
+2702,RPC Group PLC
+2704,Inchcape PLC
+2705,Domino's Pizza Group PLC
+2706,Halfords Group PLC
+2707,Moneysupermarket.com Group PLC
+2709,QinetiQ Group PLC
+2710,Beazley PLC
+2711,Jupiter Fund Management PLC
+2713,Investec PLC
+2714,City of London Investment Trust PLC
+2716,Vedanta Resources PLC
+2717,Tritax Big Box REIT Plc
+2719,Safestore Holdings PLC
+2720,Halma PLC
+2721,WH Smith PLC
+2723,Workspace Group PLC
+2724,HomeServe PLC
+2725,Pennon Group PLC
+2726,N Brown Group PLC
+2727,Telecom Plus PLC
+2728,Entertainment One Ltd
+2730,Monks Investment Trust PLC
+2731,TalkTalk Telecom Group PLC
+2732,Foreign & Colonial Investment Trust PLC
+2733,Paragon Group of Cos PLC
+2734,Dairy Crest Group PLC
+2737,NEX Group PLC
+2738,Cranswick PLC
+2739,B&M European Value Retail SA
+2740,BGEO Group PLC
+2742,Big Yellow Group PLC
+2743,PayPoint PLC
+2744,Mitie Group PLC
+2745,JD Sports Fashion PLC
+2746,Mercantile Investment Trust PLC
+2748,Electrocomponents PLC
+2749,Assura PLC
+2750,Templeton Emerging Markets Investment Tr
+2751,Indivior PLC
+2753,3i Infrastructure PLC
+2754,Intermediate Capital Group PLC
+2755,Shaftesbury PLC
+2756,Pets at Home Group Plc
+2757,NewRiver REIT PLC
+2758,TBC Bank Group PLC
+2760,Victrex PLC
+2762,Redefine International PLC
+2763,Spire Healthcare Group PLC
+2764,Grainger PLC
+2765,ZPG PLC
+2766,Countryside Properties PLC
+2767,UDG Healthcare PLC
+2768,Great Portland Estates PLC
+2769,Greencore Group PLC
+2770,SSP Group Plc
+2771,Britvic PLC
+2772,Mitchells & Butlers PLC
+2773,Diploma PLC
+2774,Euromoney Institutional Investor PLC
+2775,Marston's PLC
+2776,Brewin Dolphin Holdings PLC
+2778,Bellway PLC
+2779,Ted Baker PLC
+2780,A.G. Barr PLC
+2781,Saga PLC
+2782,AA PLC
+2783,NMC Health PLC
+2784,Just Group PLC
+2785,Card Factory PLC
+2786,J D Wetherspoon PLC
+2787,McCarthy & Stone PLC
+2788,International Public Partnerships Ltd
+2790,Sanne Group PLC
+2791,GVC Holdings PLC
+2792,Kier Group PLC
+2793,Softcat PLC
+2794,Go-Ahead Group PLC
+2795,Close Brothers Group PLC
+2798,Dunelm Group PLC
+2799,Bovis Homes Group PLC
+2800,Galliford Try PLC
+2801,Ashmore Group PLC
+2802,Thomas Cook Group PLC
+2803,Genus PLC
+2805,Serco Group PLC
+2806,Petra Diamonds Ltd
+2807,Nostrum Oil & Gas PLC
+2808,HarbourVest Global Private Equity Ltd
+2809,KAZ Minerals PLC
+2810,Firstgroup PLC
+2811,Cairn Energy PLC
+2812,BTG PLC
+2815,Genesis Emerging Markets Fund Ltd
+2816,Wizz Air Holdings Plc
+2817,Ocado Group PLC
+2818,Sirius Minerals PLC
+2820,Metro Bank PLC
+2821,AVEVA Group PLC
+2822,Vectura Group PLC
+2823,Pershing Square Holdings Ltd
+2824,CYBG PLC
+2825,Just Eat PLC
+2827,IP Group PLC
+2828,VinaCapital Vietnam Opportunity Fund
+2831,TI Fluid Systems
+2832,Superdry
+2833,Sequoia Economic Infrastructure Income Fund
+2834,Schroder AsiaPacific Fund
+2835,RHI Magnesita
+2836,Renewi
+2838,Purecircle
+2839,Provident Financial
+2840,Primary Health Properties
+2841,Pantheon International
+2842,On the Beach
+2843,Merlin Entertainments
+2844,Jupiter European Opportunities Trust
+2845,Games Workshop
+2848,Equiniti
+2849,Edinburgh Dragon Trust
+2850,ConvaTec
+2851,ContourGlobal
+2852,Charter Court Financial Services
+2854,BCA Marketplace
+2856,Bakkavor
+2859,888 Holdings
+3000,SPDR S&P 500 ETF
+3001,Emrg Mkts Index MSCI Ishares
+3002,Gold Miners ETF VanEck Vectors
+3003,Ishares MSCI JAPAN ETF
+3004,Financial Select Sector SPDR
+3005,Ishares Russell 2000 ETF
+3006,Powershares QQQ
+3007,United Stated Oil Fund
+3008,Energy Select Sector SPDR
+3009,EAFE Index MSCI Ishares
+3010,FTSE China 25 Index Fund Ishares
+3011,Russia ETF VanEck Vectors
+3012,Brazil Index MSCI Ishares
+3013,Utilities Select Sector SPDR
+3014,Junior Gold Miners ETF VanEck Vectors
+3015,DJ US Real Estate Ishares
+3016,SPDR S&P Oil & Gas Exploration & Prod
+3017,Healthcare Select Sector SPDR
+3018,US Natural Gas
+3019,Industrial Select Sector SPDR
+3020,20+ Year Trsy Bond Ishares
+3021,Technology Select Sector SPDR
+3022,Consumer Staples Select Sector SPDR
+3023,Iboxx $ High Yield Corporate Bd Ishares
+3024,Consumer Discret Select Sector SPDR
+3025,SPDR Gold
+3026,SPDR DOW 30 ETF
+3027,Proshares Ultra S&P 500 
+3028,Ishares Nasdaq Biotechnology 
+3029,SPDR S&P Midcap 400
+3030,iShares $ Corporate Bond UCITS ETF
+3035,iShares AEX UCITS ETF
+3036,iShares Asia Pacific Dividend UCITS ETF
+3040,iShares Core MSCI World UCITS ETF
+3048,iShares Emerging Markets Local Government Bond UCITS ETF
+3052,iShares FTSE 100 UCITS ETF (Dist)
+3060,iShares MSCI AC Far East ex-Japan UCITS ETF
+3061,iShares MSCI Brazil UCITS ETF (Dist)
+3063,iShares MSCI Emerging Markets UCITS ETF (Dist)
+3066,iShares MSCI Europe UCITS ETF (Dist)
+3068,iShares MSCI Japan EUR Hedged UCITS ETF
+3072,iShares MSCI Taiwan UCITS ETF
+3075,iShares S&P 500 UCITS ETF (Dist)
+3079,iShares UK Property UCITS ETF
+3080,BARCLAYS BANK IPATH S&P 500 VIX S/T FU ETN
+3099,Credit Suisse AG - VelocityShares Daily Inverse VIX Short Term ETN
+3100,iShares Barclays 1-3 Year Treasry Bnd Fd
+3101,iShares Barclays 7-10 Year Trasry Bnd Fd
+3102,PowerShares DB Agriculture Fund
+3103,Teucrium Corn Fund
+3104,Teucrium Wheat Fund
+3105,United States Gasoline Fund
+3111,SPDR DOW JONES REIT ETF
+3118,ISHARES MSCI SOUTH KOREA CAP
+3121,ISHARES MSCI MEXICO CAPPED
+3122,ISHARES MSCI TAIWAN CAPPED E
+3124,ISHARES IBOXX INVESTMENT GRA
+3125,PIMCO TOTAL RETURN ACTIVE EX
+3137,Horizons Marijuana Life Sciences Index ETF
+3138,iShares Core S&P 500 ETF
+3139,iShares Core MSCI EAFE ETF
+3140,iShares Core U.S. Aggregate Bond ETF
+3141,iShares Core MSCI Emerging Markets ETF
+3142,iShares Core S&P Mid-Cap ETF
+3143,iShares Core S&P Small-Cap ETF
+3144,iShares Core S&P Total U.S. Stock Market ETF
+3145,iShares Core MSCI Total International Stock ETF
+3146,iShares Core High Dividend ETF
+3147,iShares Core S&P US Growth
+3148,iShares Core S&P US Value
+3149,iShares Core Dividend Growth ETF
+3150,iShares Core MSCI Europe ETF
+3151,iShares Core Total USD Bond Market ETF
+3152,iShares Core 1-5 Year USD Bond ETF
+3153,iShares Core Growth Allocation ETF
+3155,iShares Core MSCI Pacific ETF
+3156,iShares Core MSCI International Developed Markets ETF
+3157,iShares Core Aggressive Allocation ETF
+3158,iShares Core International Aggregate Bond ETF
+3159,iShares Core U.S. REIT ETF
+3160,iShares Core Conservative Allocation ETF
+3161,iShares Core 10+ Year USD Bond ETF
+3162,iShares Core 5-10 Year USD Bond ETF
+3163,VIX Short-Term Futures ETN Ipath (B)
+4001,Barrick Gold
+4002,iShares MSCI ACWI Index Fund
+4003,Adecoagro S.A.
+4004,Akamai Technologies
+4005,Akorn
+4006,Allegion
+4008,Affiliated Managers Group
+4009,AutoNation
+4011,ANSYS
+4013,American Railcar Industries Inc
+4015,Axalta Coating Systems
+4016,BlackBerry Limited
+4017,Bitauto Holdings Limited
+4018,Brookfield Property Partners L.P.
+4020,Banco Santander Chile
+4021,Anheuser-Busch Inbev Sa
+4023,CalAtlantic Group
+4024,Caesars Acquisition
+4026,Cavium Inc
+4027,China Biologic
+4028,Cerner Corp.
+4029,Churchill Downs Inc.
+4031,CIT Group
+4033,CME Group
+4035,Cooper Cos Inc
+4036,Carters
+4037,Uniti Group Inc
+4039,CVR Energy
+4040,CVR Refining
+4041,CyberArk
+4042,Donaldson Company
+4045,Now Inc
+4046,Dominos Pizza Inc
+4047,Brinker Intl.
+4048,Edgewell Personal Care
+4050,Essent Group
+4054,FireEye
+4057,Flowers Foods
+4058,FleetCor Technologies
+4059,Fortive Corporation
+4061,GoDaddy Inc.
+4062,Graham Holdings Co - Class B
+4063,CGI Group
+4064,Gaming and Leisure
+4066,Garmin Ltd.
+4067,Globalstar
+4068,GW Pharmaceuticals Plc
+4069,Hain Celestial
+4070,Herbalife
+4071,Herc Holdings
+4072,Hershey Co
+4073,Hertz Global Holdings Inc
+4074,HubSpot
+4075,Interactive Brokers Group
+4076,Intercept Pharma
+4077,Illumina
+4079,Imperva
+4080,Incyte Corp.
+4081,Infosys Limited
+4084,Ionis Pharmaceuticals
+4085,Ipg Photonics Corp.
+4086,Ingersoll-Rand plc (Ireland)
+4087,Jazz Pharmaceuticals
+4089,The Kraft Heinz Company
+4091,Kronos Worldwide Inc
+4093,Lamar Advertising Company
+4095,Liberty Global A
+4096,Liberty Global C
+4098,Liberty Global PLC LiLAC Class A
+4102,Cheniere Energy Inc
+4104,Liberty Media Corporation Series A Liberty SiriusXM Common Stock
+4105,Mid-America Apartment
+4106,Moodys Corp.
+4108,MercadoLibre
+4109,Welbilt Inc
+4110,Makemytrip
+4111,Monster Beverage Corp
+4114,MUELLER WATER PRODUCTS
+4115,Maxlinear Inc
+4116,National Instruments Corporation
+4117,New Relic
+4118,Nielsen N.V.
+4119,Nuance Communications
+4121,NXP Semiconductors
+4122,Pandora Media
+4123,Pampa Energia S.A.
+4124,Palo Alto Networks
+4125,Puma Biotechnology Inc
+4126,Pinnacle Foods
+4128,Power Integrations
+4129,Pilgrims Pride
+4130,Perrigo Company
+4133,Restaurant Brands International Inc.
+4135,Red Hat
+4136,Transocean LTD
+4138,Roper Technologies Inc
+4140,Spirit Airlines
+4141,SBA Communications Corporation
+4142,Signature Bank
+4143,Service Corp Intl
+4145,SEI Investments Company
+4146,ServiceMaster Global Holdings
+4147,Seattle Genetics
+4148,Shopify Inc.
+4149,Signet Jewelers Limited (us)
+4153,Stericycle
+4155,Sensata Technologies Holding N.V.
+4157,Suncor Energy Inc.
+4159,American Outdoor Brands Corp
+4160,Skyworks Solutions
+4161,Synaptics Inc.
+4162,Syntel
+4163,Transdigm Group Incorporated
+4164,TiVo Corporation
+4165,TRI Pointe Group
+4166,Tempur Sealy
+4167,Trimble Inc.
+4168,Travelport
+4169,Under Armour
+4170,Ubiquiti Networks
+4171,USG Corporation
+4172,Varian Medical Systems
+4173,Viavi Solutions
+4174,Vipshop
+4176,VMware
+4177,Verisk Analytics
+4178,Verisign
+4179,Vertex Pharmaceuticals Incorporated
+4180,Bausch Health Companies Inc
+4181,Vista Outdoor Inc.
+4182,Wayfair Inc.
+4183,Waters Corporation
+4184,WABCO Holdings
+4185,Weatherford International plc
+4186,Willis Towers Watson Public Limited Company
+4188,58.com Inc
+4189,Dentsply Sirona Inc.
+4191,Yelp Inc.
+4193,Zendesk
+4194,Zoetis
+4196,Boyd Gaming
+4197,Six Flags
+4198,W.R Grace
+4199,Wendy's
+4200,Legg Mason
+4201,The Chemours
+4202,Lazard
+4203,Credit Acceptance
+4204,Renaissancere Holdings
+4205,Aon plc
+4206,CommScope Holding Co Inc
+4207,Sally Beauty
+4208,The Dun & Bradstreet
+4209,Post holdings
+4210,Outfront Media
+4211,Marcus & Millichap
+4212,Fastenal Company
+4213,Cia Cervecerias unidas
+4214,Four Corners Property Trust
+4215,RE/MAX Holdings
+4216,Blackhawk Network Holdings
+4218,Amplifon
+4219,Banca Generali
+4220,Banco Bpm
+4221,Brembo
+4222,Diasorin
+4223,FinecoBank
+4224,Italgas
+4225,Juventus Football Club
+4226,Pirelli & C
+4227,Poste Italiane
+4228,Recordati
+4230,Unipol
+4231,Royal Dutch ADR
+4232,Novartis ADR
+4235,BHP Group Ltd ADR
+4236,Broadcom Inc
+4237,Vanguard Total Stock Market ETF
+4238,Vanguard S&P 500 ETF
+4239,AstraZeneca PLC ADR
+4240,Rio Tinto PLC ADR
+4241,Linde PLC
+4242,Petroleo Brasileiro ADR
+4243,British American Tobacco PLC ADR
+4244,ASML Holding NV
+4245,DowDuPont Inc
+4246,Itau Unibanco Holding ADR
+4247,Enbridge Inc
+4248,Vanguard FTSE Developed Market ETF
+4249,Ambev ADR
+4250,Banco Bradesco ADR
+4251,Intuitive Surgical Inc
+4252,Vanguard FTSE Emerging Markets
+4253,Schlumberger Ltd
+4254,T-Mobile US Inc
+4255,Crown Castle International
+4257,Occidental Petroleum Corp
+4258,Vanguard Value ETF
+4259,Prologis Inc
+4260,ServiceNow Inc
+4261,Dell Technologies Inc C
+4262,iShares Russell 1000 Growth ETF
+4263,Workday Inc A
+4264,Analog Devices Inc
+4265,Edwards Lifesciences Corp
+4266,Prudential Financial Inc
+4267,Vanguard Growth ETF
+4268,Equinix Inc
+4269,iShares Russell 1000 Value ETF
+4270,Public Storage
+4271,Vanguard Total Bond Market ETF
+4272,Carnival Corp
+4273,Eaton Corp PLC
+4274,Vanguard Real Estate ETF
+4275,LyondellBasell Industries NV
+4276,Xilinx Inc
+4277,Alexion Pharmaceuticals Inc
+4278,Welltower Inc
+4280,TD Ameritrade Holding Corp
+4281,Paychex Inc
+4283,Sirius XM Holdings Inc
+4284,AvalonBay Communities Inc
+4285,Equity Residential
+4286,Atlassian Corp PLC A
+4287,Baker Hughes A GE Co
+4289,Digital Realty Trust Inc
+4290,Zimmer Biomet Holdings Inc
+4291,First Data Corp A
+4292,iShares Edge MSCI Min Vol USA
+4293,Royal Caribbean Cruises Ltd
+4294,Arista Networks Inc
+4295,Vanguard Short-Term Corporate
+4296,Vanguard Short-Term Bond ETF
+4297,Archer-Daniels-Midland Co
+4298,Vanguard FTSE All-World ex-US
+4299,Align Technology Inc
+4300,Synchrony Financial
+4301,iShares S&P 500 Growth ETF
+4302,Vanguard Intermediate-Term Corp
+4303,DTE Energy Co
+4304,Ventas Inc
+4305,IHS Markit Ltd
+4306,Aptiv PLC
+4307,Realty Income Corp
+4308,Concho Resources Inc
+4309,Lululemon Athletica Inc
+4310,Global Payments Inc
+4311,iShares TIPS Bond ETF
+4312,Hewlett Packard Enterprise Co
+4313,Microchip Technology Inc
+4314,Boston Properties Inc
+4315,TAL Education Group ADR
+4316,Ulta Beauty Inc
+4317,KLA Corporation
+4318,Vanguard Information Technology
+4319,iShares Russell 1000 ETF
+4320,IDEXX Laboratories Inc
+4321,iShares Short Treasury Bond ETF
+4322,Splunk Inc
+4323,Veeva Systems Inc A
+4324,iShares Russell Mid-Cap ETF
+4325,American Water Works Co Inc
+4326,Cadence Design Systems Inc
+4327,IAC/InterActiveCorp
+4328,Church & Dwight Co Inc
+4329,Synopsys Inc
+4330,DXC Technology Co
+4331,MSCI Inc
+4333,First Republic Bank/CA
+4334,iShares JP Morgan USD Emerging
+4335,Yum China Holdings Inc
+4336,Teva Pharmaceutical Industries ADR
+4337,Total System Services Inc
+4338,Keysight Technologies Inc
+4339,Diamondback Energy Inc
+4340,Twilio Inc A
+4341,Altice USA Inc A
+4342,Vulcan Materials Co
+4343,Citizens Financial Group Inc
+4344,Maxim Integrated Products Inc
+4346,Fortinet Inc
+4347,Canopy Growth Corp
+4348,iShares Preferred & Income Sec
+4349,Evergy Inc
+4350,Annaly Capital Management Inc
+4351,New Oriental Education & Techn ADR
+4352,International Flavors & Fragra
+4353,Mylan NV
+4354,Huntington Bancshares Inc
+4355,Marathon Oil Corp
+4356,Seagate Technology PLC
+4357,Vanguard FTSE Europe ETF
+4358,Marvell Technology Group Ltd
+4359,Citrix Systems Inc
+4361,TransUnion
+4362,ABIOMED Inc
+4363,Vistra Energy Corp
+4364,Martin Marietta Materials Inc
+4365,iShares Gold Trust
+4366,Broadridge Financial Solutions
+4367,Norwegian Cruise Line Holdings
+4368,SVB Financial Group
+4369,Wabtec Corp
+4370,Comerica Inc
+4371,Elanco Animal Health Inc
+4372,Tractor Supply Co
+4373,E*TRADE Financial Corp
+4374,Kansas City Southern
+4375,PIMCO Enhanced Short Maturity
+4376,Exact Sciences Corp
+4377,Tableau Software Inc A
+4378,Paycom Software Inc
+4379,Cabot Oil & Gas Corp
+4380,StoneCo Ltd A
+4381,Lamb Weston Holdings Inc
+4382,DexCom Inc
+4383,Ultimate Software Group Inc
+4384,iShares Edge MSCI USA Quality
+4386,Encana Corp
+4387,Westrock Co
+4388,Invesco S&P 500 Low Volatility
+4389,Okta Inc
+4390,Goldcorp Inc
+4391,F5 Networks Inc
+4392,SPDR Bloomberg Barclays High Y
+4393,Alliance Data Systems Corp
+4394,iShares Russell 2000 Growth ETF
+4395,Alerian MLP ETF
+4396,iShares Russell 2000 Value ETF
+4397,ON Semiconductor Corp
+4398,DocuSign Inc
+4399,Trade Desk Inc A
+4400,Sarepta Therapeutics Inc
+4401,Zions Bancorp NA
+4402,iShares Edge MSCI USA Momentum
+4403,Zscaler Inc
+4404,Carvana Co
+4405,Guidewire Software Inc
+4406,MongoDB Inc
+4407,SPDR Bloomberg Barclays 1-3 Months
+4408,Universal Display Corp
+4409,Roku Inc
+4411,iShares MSCI Eurozone ETF
+4412,Zayo Group Holdings Inc
+4413,Five Below Inc
+4414, Nutanix Inc A
+4416,Cimarex Energy Co
+4417,GrubHub Inc
+4418,Mellanox Technologies Ltd
+4419,XPO Logistics Inc
+4420,Guardant Health Inc
+4421,Ciena Corp
+4422,Parsley Energy Inc A
+4423,Coupa Software Inc
+4425,Versum Materials Inc
+4427,SPDR-COMM SERV Equity
+4428,Invesco Senior Loan ETF
+4429,iShares MSCI India ETF
+4430,iShares Silver Trust
+4431,SPDR S&P Biotech ETF
+4432,iShares MSCI China ETF
+4433,iShares MSCI All Country Asia
+4434,Lumentum Holdings Inc
+4435,Brighthouse Financial Inc
+4437,Spark Therapeutics Inc
+4438,Materials Select Sector SPDR 
+4439,Tandem Diabetes Care Inc
+4440,Ellie Mae Inc
+4441,iShares MSCI Hong Kong ETF
+4442,Real Estate Select Sector SPDR
+4443,SPDR S&P Regional Banking ETF
+4444,Whiting Petroleum Corp
+4445,SPDR EURO STOXX 50 ETF
+4446,iShares MSCI Germany ETF
+4447,Xtrackers Harvest CSI 300 China
+4448,RH
+4449,SPDR S&P Bank ETF
+4450,KraneShares CSI China Internet
+4451,Alliant Energy Corp
+4452,Jack Henry & Associates Inc
+4453,Xtrackers Stoxx Europe 600 Utilities Swap ETF
+4454,Xtrackers Nikkei 225 UCITS ETF
+4459,ProShares UltraPro Short QQQ
+4460,VelocityShares Daily 2x VIX Short-Term ETN
+4461,Direxion Daily Small Cap Bear 3x Shares
+4462,Direxion Daily Financial Bear 3X Shares
+4463,iShares PHLX Semiconductor ETF
+4464,ProShares UltraShort Bloomberg Crude Oil
+4465,ProShares UltraPro QQQ
+4466,First Trust Cloud Computing
+4467,Xtrackers MSCI India Swap UCITS ETF
+4489,Nio Inc.
+4500,Aalberts Industries NV
+4501,ABN AMRO Group NV
+4502,Adyen NV
+4503,Aegon NV
+4504,Akzo Nobel NV
+4505,Altice Europe NV
+4506,AMG Advanced Metallurgical Group NV
+4507,Arcadis NV
+4508,ASM International NV
+4509,ASML Holding NV
+4510,ASR Nederland NV
+4513,BE Semiconductor Industries NV
+4514,Koninklijke Boskalis Westminster NV
+4516,Koninklijke DSM NV
+4517,Flow Traders Cooperatief UA
+4519,GrandVision NV
+4521,Heineken
+4522,Heineken Holding NV
+4524,IMCD NV
+4525,Intertrust NV
+4526,KPN
+4528,NN Group NV
+4529,OCI NV
+4531,Royal Philips Electronics NV
+4532,PostNL NV
+4533,Randstad Holding NV
+4534,SBM Offshore NV
+4535,Signify NV
+4537,Takeaway.com NV
+4539,TKH Group
+4540,TomTom BV
+4541,Unilever DR
+4542,Koninklijke VolkerWessels NV
+4543,Koninklijke Vopak NV
+4544,Wereldhave NV
+4545,Wolters Kluwer NV
+4546,Koninklijke Ahold NV
+5000,Atos SE
+5001,Dassault Systemes
+5002,Sodexo SA
+5003,STMicroelectronics NV
+5004,TechnipFMC Ltd
+5005,Air France-KLM
+5006,Altran Technologies SA
+5007,Amundi SA
+5008,Societe BIC SA
+5009,BioMerieux
+5010,Bollore SA
+5011,Bureau Veritas SA
+5012,Casino Guichard Perrachon SA
+5013,CNP Assurances
+5014,Dassault Aviation SA
+5015,Eiffage SA
+5016,Elior Group SA
+5017,Eurofins Scientific SE
+5018,Euronext NV
+5019,Fnac Darty SA
+5020,Genfit
+5021,Getlink SE
+5022,Aeroports de Paris ADP
+5023,Iliad SA
+5024,Ingenico Group SA
+5025,Ipsen SA
+5027,Klepierre SA
+5028,Lagardere SCA
+5029,Metropole Television SA
+5030,Natixis SA
+5031,Nexity SA
+5032,Cie Plastic Omnium SA
+5033,Remy Cointreau SA
+5034,SEB SA
+5035,Sopra Steria Group
+5036,Suez
+5037,Tarkett SA
+5038,Technicolor SA
+5039,Television Francaise 1
+5040,Thales SA
+5041,Trigano SA
+5042,Ubisoft Entertainment SA
+5043,Vallourec SA
+5044,Christian Dior
+5045,Fastly Inc
+5046,Luckin Coffee Inc.
+5500,PLUS 500 LTD
+5501,CMC MARKETS PLC
+5502,GAIN CAPITAL HOLDINGS LTD
+5503,Fiverr International 
+5504,Slack Technologies Inc
+5505,Chewy
+5506,Crowdstrike Holdings
+5507,Farfetch
+5508,Acerinox SA
+5509,Aena SME
+5510,Laboratorios Almirall SA
+5512,Applus Services SA
+5518,Ence Energia Y Celulosa SA
+5523,Gestamp Automocion
+5526,Compania de Distribucion Integral Logista Holdings
+5527,Masmovil Ibercom SA
+5528,Melia Hotels International SA
+5533,Pharma Mar SA
+5534,Prosegur Compania de Seguridad SA
+5542,Unicaja Banco SA
+5544,Viscofan SA
+5560,Akka Technologies
+5561,DBV Technologies
+5567,Iren
+5569,A P Moller
+5571,Cargotec Oyj
+5572,DNA Oyj
+5573,Huhtam+ñki Oyj
+5576,Metsa Board
+5578,Nokia Corp.
+5580,Outokumpu Oyj
+5581,Outotec Oyj
+5591,Ams AG
+5592,Landis Gyr Group Ltd
+5593,u-blox Holding AG
+5596,Daetwyler Holding AG
+5598,Stadler Rail AG
+5603,SMA Solar Technology AG
+5604,Kratos Defense & SEC Solutions Com new
+5605,Ambarella Inc
+5606,Heico Corporation
+5607,AeroVironment Inc.
+5608,Parrot SA
+5609,Douyu 
+5610,Ryanair
+5615,360 Finance Inc.
+5617,Alarm.com Holdings Inc.
+5618,Alder BioPharmaceuticals Inc.
+5621,Avid Technology Inc.
+5622,Axogen Inc.
+5623,Ballard Power Systems Inc.
+5624,BioTelemetry Inc.
+5625,CalAmp Corp.
+5626,Canadian Solar Inc.
+5627,Ceva Inc.
+5628,Conmed Corp.
+5630,Cray Inc.
+5631,Cree Inc.
+5632,CYPRESS SEMICOND
+5633,Dennys Corp.
+5634,Enphase Energy Inc.
+5635,Euronet Worldwide Inc.
+5636,Flex Ltd
+5637,FLIR Systems Inc.
+5638,Fossil Inc.
+5639,Gentex Corporation
+5640,Impinj Inc.
+5641,Insulet Corp.
+5642,InterDigital Inc.
+5643,iRhythm Technologies Inc.
+5645,iRobot Corp.
+5646,Johnson Outdoors Inc.
+5648,Masimo Corp.
+5649,Medidata Solutions Inc.
+5650,NuVasive Inc.
+5651,ORBCOMM Inc.
+5652,Pool Corp.
+5653,PTC Inc.
+5654,Qorvo Inc.
+5656,Qutoutiao Inc.
+5657,Semtech Corp.
+5659,Silicon Laboratories Inc.
+5660,Sunrun Inc.
+5661,Universal Electronics Inc.
+5662,Zebra Technologies Corp.
+5664,Jumia Technologies AG
+5665,Factset Research Systems Inc.
+5666,22nd Century Group Inc.
+5667,3D Systems Corp.
+5668,Acuity Brands Inc.
+5669,ADT Inc.
+5670,Alteryx Inc.
+5671,Aquantia Corp.
+5672,Bright Horizons Family Solutions
+5674,Cloudera Inc.
+5675,Companhia Energetica de Minas Gerais
+5676,Cubic Corp.
+5677,Haemonetics Corp.
+5679,Huami Corp.
+5680,Hubbell Inc.
+5682,Innovative Industrial Properties Inc. A
+5683,Inspire Medical Systems Inc.
+5685,LTC Properties Inc.
+5686,MagnaChip Semiconductor Corp.
+5687,Main Street Capital Corp.
+5688,MEDNAX Inc.
+5690,NeoPhotonics Corp.
+5691,Ormat Technologies Inc.
+5692,Qudian Inc.
+5693,Rosetta Stone Inc.
+5694,STAG Industrial Inc.
+5695,Store Capital Corp.
+5696,TE Connectivity Ltd
+5697,Vivint Solar Inc.
+5698,Weight Watchers International Inc.
+5699,Winnebago Industries Inc.
+5701,TransEnterix Inc.
+5702,1 800 FLOWERS COM
+5703,Blue Apron Holdings Inc.
+5704,CBRL Group Inc.
+5705,John Bean Technologies Corp.
+5706,Papa Johns International Inc.
+5707,Performance Food Group Co.
+5708,Sprouts Farmers Market Inc.
+5709,TreeHouse Foods Inc.
+5710,US Foods Holding Corp.
+5711,WeWork
+5712,Cloudflare
+5714,Peloton Interactive
+5715,9F Inc
+5721,Hera SPA
+5722,Interpump Group
+5724,Ambu A/S
+5726,FLSmidth & Co. A/S
+5727,GN Store Nord A/S
+5728,Jyske Bank A/S
+5729,Rockwool International B A/S
+5730,Royal Unibrew A/S
+5731,SimCorp A/S
+5732,Galapagos
+5733,ING Groep NV
+5735,Ackermans & Van Haaren NV
+5736,Ageas NV
+5737,Anheuser Busch InBev
+5738,Argenx Se
+5740,Colruyt
+5741,Groupe Bruxelles Lambert
+5742,KBC Groep
+5743,Proximus SA
+5744,Sofina SA
+5745,Telenet Group Holding NV
+5746,UCB SA
+5747,Umicore
+5748,Warehouse & Distribution De Pauw SICAFI SCA
+5751,Glanbia Plc
+5752,Kerry Group Plc
+5753,Kingspan Group Plc
+5754,Banco Comercial Portugues SA
+5755,EDP - Energias de Portugal SA
+5757,Jeronimo Martins SGPS SA
+5758,Alten SA
+5759,Arkema
+5760,Covivio SA
+5761,Edenred SA
+5762,Elis SA
+5763,Eurazeo
+5764,Eutelsat Communications
+5765,Faurecia
+5766,Gecina Nom.
+5767,Icade SA
+5768,Imerys
+5769,J C Decaux
+5770,Orpea
+5771,Rexel SA
+5772,Rubis SCA
+5773,Sartorius Stedim Biotech SA
+5774,Scor SE
+5775,SES GLOBAL FDR
+5776,Spie SA
+5777,Teleperformance SE
+5778,Wendel
+5779,Worldline SA
+5781,Kesko Oyj B
+5782,Konecranes Oyj
+5783,Metso Oyj
+5785,Orion Oyj B
+5787,Valmet Corporation
+5789,St.Jamess Place Capital Plc
+5797,Aker BP ASA
+5798,Equinor ASA
+5799,NEL ASA
+5800,SalMar ASA
+5801,Schibsted ASA
+5802,Tomra Systems
+5804,Alcon Inc.
+5806,Baloise Holding AG
+5807,Barry Callebaut AG
+5808,Bucher Industries AG
+5809,Cembra Money Bank AG
+5811,Clariant AG
+5812,DKSH Holding AG
+5813,Dufry AG
+5814,Ems-Chemie Holding AG
+5815,Flughafen Zurich AG
+5816,Galenica AG
+5818,Helvetia Holding AG
+5819,Kuehne & Nagel International AG
+5820,Logitech International SA
+5821,Lonza Group Ltd
+5822,OC Oerlikon Corporation AG
+5823,Pargesa Holding SA
+5824,Partners Group Holding AG
+5825,PSP Swiss Property AG
+5826,Schindler Holding AG
+5827,Sika Ltd
+5828,Sonova Holding AG
+5829,Straumann Holding Ltd
+5830,Sunrise Communications Group Ltd
+5831,Swiss Prime Site AG
+5832,Tecan Group AG
+5833,Temenos Ltd
+5834,VAT Group Ltd
+5835,Vifor Pharma AG
+5838,Cellnex Telecom SA
+5839,Inmobiliaria Colonial Socimi SA
+5840,Merlin Properties SOCIMI SA
+5843,AAK AB
+5844,Castellum AB
+5845,Dometic Group AB
+5846,Elekta AB Ser. B
+5847,Epiroc AB - A shares - A shares
+5848,Essity AB ser. B
+5849,Fabege AB
+5850,Fastighets AB Balder ser. B
+5851,Getinge AB Ser. B
+5852,HEXPOL AB ser. B
+5853,Husqvarna AB Ser. B
+5854,Investor AB ser. B
+5855,Kindred Group plc
+5857,Loomis AB ser. B
+5858,Nibe Industrier AB Ser. B
+5860,Saab AB Ser. B
+5862,Swedish Orphan Biovitrum AB
+5863,Tele2 AB Ser. B
+5882,Porsche Automobil Holding SE
+5888,LA FRANCAISE DES JEUX 
+100000,Bitcoin
+100001,Ethereum
+100002,Bitcoin Cash
+100003,Ripple
+100004,Dash
+100005,Litecoin
+100007,Ethereum Classic
+100017,Cardano
+100018,IOTA
+100020,Stellar
+100022,EOS
+100023,NEO
+100026,TRON
+100028,ZCASH
+100030,Binance Coin
+100032,Tezos
+100109,Bitcoin/Euro
+100110,Ethereum/Euro
+100117,Ethereum / Pound 
+100118,Bitcoin / Pound 
+100119,EOS / Pound 
+100120,Ripple / Pound 
+100121,Ethereum / Japanese Yen
+100122,Bitcoin / Japanese Yen
+100123,EOS / Japanese Yen
+100124,Ripple / Japanese Yen
+100125,Ethereum / EOS
+100131,Ethereum / Stellar 
+100133,Ethereum / Bitcoin
+100134,Bitcoin / EOS
+100140,Bitcoin / Stellar 
+100147,EOS / Stellar
+100154,Bitcoin / Australian Dollar
+100155,Bitcoin / New Zealand Dollar
+100156,Bitcoin / Canadian Dollar
+100157,Bitcoin / Swiss Franc
+100158,Ethereum/ Australian Dollar
+100159,Ethereum/ New Zealand Dollar
+100160,Ethereum/ Canadian Dollar
+100161,Ethereum/ Swiss Franc
+100162,Ripple / Euro
+100163,Ripple/ Australian Dollar
+100164,Ripple/ New Zealand Dollar
+100165,Ripple/ Canadian Dollar
+100166,Ripple/ Swiss Franc
+100168,Ethereum Classic / Euro
+100169,Ethereum Classic / Pound
+100170,Ethereum Classic / Australian Dollar
+100171,Ethereum Classic / New Zealand Dollar
+100172,Ethereum Classic / Canadian Dollar
+100173,Ethereum Classic / Swiss Franc
+100174,Ethereum Classic / Japanese Yen 
+100175,Bitcoin Cash / Euro
+100176,Bitcoin Cash / Pound
+100177,Bitcoin Cash / Australian Dollar
+100178,Bitcoin Cash / New Zealand Dollar
+100179,Bitcoin Cash / Canadian Dollar
+100180,Bitcoin Cash / Swiss Franc
+100181,Bitcoin Cash / Japanese Yen 
+100182,Litecoin/ Euro
+100183,Litecoin/ Pound
+100184,Litecoin/ Australian Dollar
+100185,Litecoin/ New Zealand Dollar
+100186,Litecoin/ Canadian Dollar
+100187,Litecoin/ Swiss Franc
+100188,Litecoin/ Japanese Yen 
+100189,Bitcoin Cash / Litecoin
+100196,Silver / Pound
+100197,Silver / Japanese Yen
+100198,Silver / Euro
+100203,Silver / Swiss Franc
+100204,Silver / Australian Dollar
+100205,Silver / New Zealand Dollar
+100209,Stellar / Pound
+100210,Stellar / Japanese Yen
+100211,Stellar / Euro
+100213,Zcash / Ethereum
+100214,Zcash / Litecoin
+100215,Zcash / Bitcoin Cash
+100216,Zcash / Dash
+100217,Zcash / Pound
+100218,Zcash / Japanese Yen
+100219,Zcash / Euro
+100221,Zcash / Ripple
+100222,Zcash / Stellar
+100223,Bitcoin / Chinese yuan
+100224,Ethereum / Chinese yuan
+100225,Dash / New Zealand Dollar
+100228,Gold / New Zealand Dollar
+100229,Stellar / New Zealand Dollar
+100230,Zcash / New Zealand Dollar
+100232,Dash / Australian Dollar
+100236,Gold / Australian Dollar
+100237,Stellar / Australian Dollar
+100238,Zcash / Australian Dollar
+100239,Dash / Swiss Franc
+100242,Gold / Swiss Franc
+100243,Stellar / Swiss Franc
+100244,Zcash / Swiss Franc
+100245,Ripple / Dash
+100251,Gold / Pound
+100252,Gold / Japanese Yen
+100253,Gold / Euro
+100254,Dash / Euro
+100255,Dash / Japanese Yen
+100256,Dash / Pound
+100257,USDX / USD
+100263,GOLDBTC
+100269,BTCGRAM
+100270,GRAM
+100271,ETHGRAM
+100272,GRAMEUR
