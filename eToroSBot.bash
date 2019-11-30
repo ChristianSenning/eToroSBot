@@ -34,7 +34,8 @@ curlCrawl () {
 
   # abort on error
   if [ $fetchWorked -ne 1 ]; then
-    ./telegram -t $tgAPI -c $tgcID "Error data from eToro blocked. Need new cookie"
+    echo "Error: New cookie file required"
+    ./telegram -t $tgAPI -c $tgcID "Maintenance message: Need new cookie requierd. Pausing bot."
     exit 1
   fi 
 }
@@ -53,7 +54,8 @@ fetchEToroData() {
   # fetch cid from config list
   cid=`grep "$trader" "$inFileCid"`
   if [ "$?" -ne "0" ]; then
-    echo "Error trader not found"
+    echo "Error: Configuration error, trader not found"
+    ./telegram -t $tgAPI -c $tgcID "Error message: Configuration error. Pausing bot."
     exit 1
   fi   
   cid=${cid##*,}
@@ -169,8 +171,9 @@ lineToMessage () {
   local open=`echo $pos | awk -F "," '{print $4}'`
   local bsType=`echo $pos | awk -F "," '{print $6}'`
   if [ "$bsType" == "\"IsBuy\":true," ]; then bs="long"; else bs="short"; fi
-  tp=`echo $pos | awk -F "," '{print $7}'`
-  sl=`echo $pos | awk -F "," '{print $8}'`
+  local tp=`echo $pos | awk -F "," '{print $7}'`
+  local sl=`echo $pos | awk -F "," '{print $8}'`
+  local levarage=`echo $pos | awk -F "," '{print $16}'`
 
   # asset nummer in asset name wandeln
   local asset=`grep -m1 "${assetnr##*\:}" "$inFileAsset"`
@@ -184,11 +187,12 @@ lineToMessage () {
   cat >>$outFileMsg"_"$(printf "%03d" $index) << EOF
 ********************
 $msgTyp $bs position
-  Time:   ${time:1:16}
-  Asset:  $asset
-  open:   ${open##*\:}
-  TP:     ${tp##*\:}
-  SL:     ${sl##*\:}
+  Time:	${time:1:16}
+  Asset:	$asset
+  open:	${open##*\:}
+  TP:	${tp##*\:}
+  SL:	${sl##*\:}
+  Levarage:	${levarage##*\:}
 EOF
 }
 
@@ -259,6 +263,21 @@ msgSend () {
   fi
 }
 
+# Sicherstellen, dass nur einmal ausgeführt und nicht ausführen nach einem Fehler
+lockFileGen () {
+
+# prüfen, dass nicht bereits ein lockfile existiert
+  if [ -f  $outFileLock ]; then
+    # bot beenden
+    echo "Info: Lockfile exists. Therefore aborted bot"
+    exit 1
+  fi
+
+  # lockfile erstellen mit der aktuellen Ausführzeit
+  date > $outFileLock
+
+}
+
 
 ###############################################################################################
 # Hauptprogramm
@@ -268,6 +287,9 @@ cd "$(dirname "$0")"
 
 # Konfiguration laden
 source eToroSBot.conf
+
+# Sicherstellen, dass nur einmal ausgeführt und nicht ausführen nach einem Fehler
+lockFileGen
 
 # alte Daten sichern
 cp "$outFileNew" "$outFileOld"
@@ -287,4 +309,5 @@ msgSend
 # Kopiere alle positionen ins log verzeichnis
 cp "$outFileNew" "$logDir/`date "+%g%m%d__%H_%M"`"
 
-
+# lockfile entfernen
+rmFile $outFileLock
