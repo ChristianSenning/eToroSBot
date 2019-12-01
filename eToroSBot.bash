@@ -170,7 +170,7 @@ lineToMessage () {
   local time=${time#*\:}
   local open=`echo $pos | awk -F "," '{print $4}'`
   local bsType=`echo $pos | awk -F "," '{print $6}'`
-  if [ "$bsType" == "\"IsBuy\":true," ]; then bs="long"; else bs="short"; fi
+  if [[ $bsType == *"true"* ]]; then bs="long"; else bs="short"; fi
   local tp=`echo $pos | awk -F "," '{print $7}'`
   local sl=`echo $pos | awk -F "," '{print $8}'`
   local levarage=`echo $pos | awk -F "," '{print $16}'`
