@@ -35,7 +35,11 @@ curlCrawl () {
   # abort on error
   if [ $fetchWorked -ne 1 ]; then
     echo "Error: New cookie file required"
-    ./telegram -t $tgAPI -c $tgcID "Maintenance message: Need new cookie requierd. Pausing bot."
+    if [ "$silentMode" == "false" ]; then
+      ./telegram -t $tgAPI -c $tgcID "Maintenance message: New cookie required. Pausing bot."
+    else
+       echo "Maintenance message: New cookie required. Pausing bot."
+    fi
     exit 1
   fi 
 }
@@ -186,7 +190,7 @@ lineToMessage () {
   
   cat >>$outFileMsg"_"$(printf "%03d" $index) << EOF
 ********************
-$msgTyp $bs position
+**$msgTyp** $bs position
   Time:	${time:1:16}
   Asset:	$asset
   open:	${open##*\:}
@@ -256,10 +260,18 @@ msgSend () {
   if [ -f $outFileMsg"_000" ]; then
     local msgFiles=$outFileMsg"_*"
     for msg in $msgFiles; do
-      cat $msg | ./telegram -t $tgAPI -c $tgcID -
+
+      if [ "$silentMode" == "false" ]; then
+         cat $msg | ./telegram -t $tgAPI -c $tgcID -
+      else
+         cat $msg
+      fi
+
       rmFile $msg
     done
-    ./telegram -t $tgAPI -c $tgcID "Portfolio:https://www.etoro.com/people/$trader/portfolio"$'\n'"thanks: paypal.me/ChristianSenning"
+    if [ "$silentMode" == "false" ]; then
+      ./telegram -t $tgAPI -c $tgcID "Portfolio:https://www.etoro.com/people/$trader/portfolio"$'\n'"thanks: paypal.me/ChristianSenning"
+    fi
   fi
 }
 
@@ -284,6 +296,20 @@ lockFileGen () {
 
 # ins arbeitsverzeichnis wechseln
 cd "$(dirname "$0")"
+
+# Standard Einstellungen
+silentMode=false
+
+while [ -n "$1" ]; do # while loop starts
+    case "$1" in
+    -s) echo "Using silent mode"
+        silentMode=true ;; # Silent mode
+#    -b) echo "-b option passed" ;; # Message for -b option
+#    -c) echo "-c option passed" ;; # Message for -c option
+    *) echo "Option $1 not recognized" ;; # In case you typed a different option other than a,b,c
+    esac
+    shift
+done
 
 # Konfiguration laden
 source eToroSBot.conf
