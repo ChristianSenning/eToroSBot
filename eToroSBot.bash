@@ -36,7 +36,7 @@ curlCrawl () {
   if [ $fetchWorked -ne 1 ]; then
     echo "Error: New cookie file required"
     if [ "$silentMode" == "false" ]; then
-      ./telegram -t $tgAPI -c $tgcID "Maintenance message: New cookie required. Pausing bot."
+      ./telegram -M -t $tgAPI -c $tgcID "Maintenance message: New cookie required. Pausing bot."
     else
        echo "Maintenance message: New cookie required. Pausing bot."
     fi
@@ -59,7 +59,7 @@ fetchEToroData() {
   cid=`grep "$trader" "$inFileCid"`
   if [ "$?" -ne "0" ]; then
     echo "Error: Configuration error, trader not found"
-    ./telegram -t $tgAPI -c $tgcID "Error message: Configuration error. Pausing bot."
+    ./telegram -M -t $tgAPI -c $tgcID "Error message: Configuration error. Pausing bot."
     exit 1
   fi   
   cid=${cid##*,}
@@ -190,7 +190,7 @@ lineToMessage () {
   
   cat >>$outFileMsg"_"$(printf "%03d" $index) << EOF
 ********************
-**$msgTyp** $bs position
+*$msgTyp* $bs position
   Time:	${time:1:16}
   Asset:	$asset
   open:	${open##*\:}
@@ -262,7 +262,7 @@ msgSend () {
     for msg in $msgFiles; do
 
       if [ "$silentMode" == "false" ]; then
-         cat $msg | ./telegram -t $tgAPI -c $tgcID -
+         cat $msg | ./telegram -M -t $tgAPI -c $tgcID -
       else
          cat $msg
       fi
@@ -270,7 +270,7 @@ msgSend () {
       rmFile $msg
     done
     if [ "$silentMode" == "false" ]; then
-      ./telegram -t $tgAPI -c $tgcID "Portfolio:https://www.etoro.com/people/$trader/portfolio"$'\n'"thanks: paypal.me/ChristianSenning"
+      ./telegram -M -t $tgAPI -c $tgcID "Portfolio:https://www.etoro.com/people/$trader/portfolio"$'\n'"thanks: paypal.me/ChristianSenning"
     fi
   fi
 }
