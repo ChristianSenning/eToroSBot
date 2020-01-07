@@ -45,8 +45,13 @@ The bot has been developed under Linux and is mainly a bash script. The followin
 
 Personally I would call this code early beta state. The code is for educational purposes only and has not been intensively tested. Use it on your own risc.
 
-If you just like to see the bot in action you can use my bot, which is monitoring romantic69 portfolio. The corresponding telegram link is `t.me/eToroSbot`
-Also for this telegram bot I do not take any responsibility and it is for educational purposes only. The bot runs on an old raspberry pi without proper server monitoring, UPS or similar, as it is just for my private purpose.
+If you just like to see the bot in action you can follow some of my bots:
+* romantic69: https://t.me/esb_romantic69
+* adilelouali: https://t.me/esb_adilelouali
+* haich_s90: https://t.me/esb_haich_s90
+* OliverDanvel: https://t.me/esb_OliverDanvel
+
+Also for these telegram bots I do not take any responsibility and it is for educational purposes only. The bots runs on an old raspberry pi without proper server monitoring, UPS or similar, as it is just for my private purpose.
 
 # Licence
 
