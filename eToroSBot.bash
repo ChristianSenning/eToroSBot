@@ -36,7 +36,7 @@ curlCrawl () {
   if [ $fetchWorked -ne 1 ]; then
     echo "Error: New cookie file required"
     if [ "$silentMode" == "false" ]; then
-      ./telegram -M -t $tgAPI -c $tgcID "Maintenance message: New cookie required. Pausing bot."
+      ./telegram -t $tgAPI -c $tgcID "Maintenance message: New cookie required. Pausing bot."
     else
        echo "Maintenance message: New cookie required. Pausing bot."
     fi
@@ -59,7 +59,7 @@ fetchEToroData() {
   cid=`grep "$trader" "$inFileCid"`
   if [ "$?" -ne "0" ]; then
     echo "Error: Configuration error, trader not found"
-    ./telegram -M -t $tgAPI -c $tgcID "Error message: Configuration error. Pausing bot."
+    ./telegram -t $tgAPI -c $tgcID "Error message: Configuration error. Pausing bot."
     exit 1
   fi   
   cid=${cid##*,}
@@ -103,6 +103,26 @@ fetchEToroData() {
   done
 }
 
+###############################################################################################
+# Neue Positionen prüfen
+
+checkNewOpen () {
+  dSLong=`echo $1 | awk -F "," '{print $3}'`
+  dStringPos=${dSLong:16:28}
+
+  dValPos=`date --date="$dStringPos" +%s`
+  dValNow=`date +%s`
+
+  dValDiff=$((dValNow-dValPos))
+  dValMax=$(($maxHOpen*60*60))
+  
+  if [ $dValDiff -gt $dValMax ]; then
+    echo "Position to long open and therefore ignored"
+    return 1
+  fi
+  return 0
+}
+
 
 ###############################################################################################
 # Veränderte Positionen erkennen
@@ -125,7 +145,13 @@ identDifference () {
   # neue Positionen finden
   rmFile "$outFilePosOpen"
   for newPos in $(grep ">" $tmpFilePosDiff | awk '{print $2}'); do
-    grep "$newPos" "$inFileNew" >> "$outFilePosOpen"
+     #grep "$newPos" "$inFileNew" >> "$outFilePosOpen"
+    newPosStr=`grep "$newPos" "$inFileNew"`
+    checkNewOpen $newPosStr
+    rVal=$? 
+    if [ "$rVal" -eq "0" ]; then
+       echo $newPosStr >> "$outFilePosOpen"
+    fi
   done
 
   # geschlossene Positionen finden
@@ -176,8 +202,10 @@ lineToMessage () {
   local bsType=`echo $pos | awk -F "," '{print $6}'`
   if [[ $bsType == *"true"* ]]; then bs="long"; else bs="short"; fi
   local tp=`echo $pos | awk -F "," '{print $7}'`
+  local cr=`echo $pos | awk -F "," '{print $12}'`
   local sl=`echo $pos | awk -F "," '{print $8}'`
   local levarage=`echo $pos | awk -F "," '{print $16}'`
+  local np=`echo $pos | awk -F "," '{print $14}'`
 
   # asset nummer in asset name wandeln
   local asset=`grep -m1 "${assetnr##*\:}" "$inFileAsset"`
@@ -190,13 +218,15 @@ lineToMessage () {
   
   cat >>$outFileMsg"_"$(printf "%03d" $index) << EOF
 ********************
-*$msgTyp* $bs position
+<b>$msgTyp</b> $bs position
   Time:	${time:1:16}
   Asset:	$asset
   open:	${open##*\:}
   TP:	${tp##*\:}
+  CR:   ${cr##*\:}
   SL:	${sl##*\:}
   Levarage:	${levarage##*\:}
+  NP:	${np##*\:}
 EOF
 }
 
@@ -262,7 +292,7 @@ msgSend () {
     for msg in $msgFiles; do
 
       if [ "$silentMode" == "false" ]; then
-         cat $msg | ./telegram -M -t $tgAPI -c $tgcID -
+         cat $msg | ./telegram -H -t $tgAPI -c $tgcID -
       else
          cat $msg
       fi
@@ -270,7 +300,7 @@ msgSend () {
       rmFile $msg
     done
     if [ "$silentMode" == "false" ]; then
-      ./telegram -M -t $tgAPI -c $tgcID "Portfolio:https://www.etoro.com/people/$trader/portfolio"$'\n'"thanks: paypal.me/ChristianSenning"
+      ./telegram -t $tgAPI -c $tgcID "Portfolio:https://www.etoro.com/people/$trader/portfolio"$'\n'"Donate for bot to: paypal.me/ChristianSenning"
     fi
   fi
 }
