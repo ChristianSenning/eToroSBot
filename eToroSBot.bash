@@ -42,6 +42,23 @@ curlCrawl () {
     fi
     exit 1
   fi 
+
+  # Check on error message of eToro
+  if [[ "$retValCurlCrawl" == *"<title>50"* ]]; then
+      echo $retValCurlCrawl
+      echo "##########################"
+      echo $urlTot
+      echo "Error: eToro seems not available"
+      if [ "$silentMode" == "false" ]; then
+        ./telegram -t $tgAPI -c $tgcID "Maintenance message: eToro seems not available. Bot will be started in a few minutes again"
+      else
+         echo "Maintenance message: eToro seems not available. Bot will be started in a few minutes again"
+       fi
+    ## clean up for the next start (copy the old output back)
+    cp "$outFileOld" "$outFileNew"
+    rmFile $outFileLock
+    exit 1
+  fi 
 }
 
 
@@ -101,6 +118,11 @@ fetchEToroData() {
     done
 
   done
+
+  # assure that each line is a resonable line. To this end I check for a key word
+  cp $outFile "$outFile"_tmp
+  grep "CurrentRate" "$outFile"_tmp > $outFile
+  rmFile "$outFile"_tmp
 }
 
 ###############################################################################################
@@ -206,6 +228,7 @@ lineToMessage () {
   local sl=`echo $pos | awk -F "," '{print $8}'`
   local levarage=`echo $pos | awk -F "," '{print $16}'`
   local np=`echo $pos | awk -F "," '{print $14}'`
+  local np2=${np##*\:}
 
   # asset nummer in asset name wandeln
   local asset=`grep -m1 "${assetnr##*\:}" "$inFileAsset"`
@@ -226,7 +249,7 @@ lineToMessage () {
   CR:   ${cr##*\:}
   SL:	${sl##*\:}
   Levarage:	${levarage##*\:}
-  NP:	${np##*\:}
+  NP:	${np2:0:10}
 EOF
 }
 
