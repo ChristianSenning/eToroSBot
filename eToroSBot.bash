@@ -120,6 +120,7 @@ fetchEToroData() {
   done
 
   # assure that each line is a resonable line. To this end I check for a key word
+  touch $outFile 
   cp $outFile "$outFile"_tmp
   grep "CurrentRate" "$outFile"_tmp > $outFile
   rmFile "$outFile"_tmp
