@@ -50,6 +50,7 @@ If you just like to see the bot in action you can follow some of my bots:
 * adilelouali: https://t.me/esb_adilelouali
 * haich_s90: https://t.me/esb_haich_s90
 * OliverDanvel: https://t.me/esb_OliverDanvel
+* Lemansky: https://t.me/esb_lemansky
 
 Also for these telegram bots I do not take any responsibility and it is for educational purposes only. The bots runs on an old raspberry pi without proper server monitoring, UPS or similar, as it is just for my private purpose.
 
