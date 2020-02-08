@@ -1,6 +1,36 @@
 #!/bin/bash
 
 ###############################################################################################
+# Standard Konfiguration kann mit einer spezfischen Konfiguration geändert werden
+getStdConf () {
+  # directories
+  dataDir="./data"
+  tmpDir="./tmp"
+  logDir="./log"
+
+  # config files
+  inFileCid="cid.txt"
+  inFileAsset="asset.txt"
+  inFileCookie="cookies.txt"
+
+  # working files
+  outFileNew="$dataDir/newPos.csv"
+  outFileOld="$dataDir/oldPos.csv"
+  outFilePosOpen="$dataDir/openPos.csv"
+  outFilePosClose="$dataDir/closePos.csv"
+  outFileCTrades="$dataDir/ctrades.csv"
+  outFileChangeTP="$dataDir/changedTP.csv"
+  outFileChangeSL="$dataDir/changedSL.csv"
+  outFileMsg="$dataDir/msgFile.txt"
+  outFileLock="$tmpDir/lock.tmp"
+
+  # parameters
+  maxHOpen=1
+  nrNotFoundClosedPos=0
+}
+
+
+###############################################################################################
 # einzelne Abfrage bei eToro machen
 curlCrawl () {
   # Variabeln Initalisierung & Konfiguration
@@ -40,7 +70,7 @@ curlCrawl () {
     else
        echo "Maintenance message: New cookie required. Pausing bot."
     fi
-    exit 1
+    revertAndTerminate
   fi 
 
   # Check on error message of eToro
@@ -49,18 +79,25 @@ curlCrawl () {
       echo "##########################"
       echo $urlTot
       echo "Error: eToro seems not available"
-      if [ "$silentMode" == "false" ]; then
-        ./telegram -t $tgAPI -c $tgcID "Maintenance message: eToro seems not available. Bot will be started in a few minutes again"
-      else
-         echo "Maintenance message: eToro seems not available. Bot will be started in a few minutes again"
-       fi
+      
     ## clean up for the next start (copy the old output back)
-    cp "$outFileOld" "$outFileNew"
-    rmFile $outFileLock
-    exit 1
+    revertAndTerminate
   fi 
 }
 
+
+###############################################################################################
+# Kontrolliert bot beenden
+revertAndTerminate() {
+   if [ "$silentMode" == "false" ]; then
+     ./telegram -t $tgAPI -c $tgcID "Maintenance message: eToro seems not available. Bot will be started in a few minutes again"
+  else
+     echo "Maintenance message: eToro seems not available. Bot will be started in a few minutes again"
+  fi
+  cp "$outFileOld" "$outFileNew"
+  rmFile $outFileLock
+  exit 1
+}
 
 
 ###############################################################################################
@@ -88,13 +125,27 @@ fetchEToroData() {
   retValCurlCrawl=""
   curlCrawl "$url"
 
+  # Daten prüfen
+  if [[ "$retValCurlCrawl" != *"CreditByRealizedEquity"* ]]; then
+     echo "Fetch of portfolio did not work. Pausing bot"
+     revertAndTerminate
+  fi
+
+  # Leerer File sicherstellen
+  rmFile "$outFile"
+
+  # falls positionen vorhanden sind
+  if [[ "$retValCurlCrawl" == *"\"AggregatedPositions\":[]"* ]]; then
+    echo "Empty portfolio"
+    # lockfile entfernen
+    rmFile $outFileLock
+    exit 0
+  fi
+
   # ausschliesslich die AggregatedPositions herausfiltern
   fContent=$retValCurlCrawl
   fContent=${fContent%%\}],\"AggregatedMirrors*}
   fContent=${fContent##*AggregatedPositions\":[{}
-
-  # Leerer File sicherstellen
-  rmFile "$outFile"
 
   # jede Asset Klasse durchgehen und alle entsprechenden Trades holen
   for assetClass in $(echo $fContent | sed 's/},{/\n/g'); do
@@ -107,6 +158,13 @@ fetchEToroData() {
 
     # Daten abgreifen
     curlCrawl "$url"
+
+    # Daten prüfen
+    if [[ "$retValCurlCrawl" != *"PublicPositions"* ]]; then
+       echo $retValCurlCrawl
+       echo "Fetch of position did not work. Pausing bot"
+       revertAndTerminate
+    fi
 
     # Daten extrahieren  
     fContent=$retValCurlCrawl
@@ -208,6 +266,99 @@ identDifference () {
   rmFile "$tmpFilePosDiff"
 }
 
+###############################################################################################
+# Holt sich die geschlossenen Trades der letzten 2 bis 3 Tage 
+
+getCTrades() {
+  # get the date of today and yesterday
+  dDBYesterday=`date -d "2 day ago" '+%Y-%m-%d'`
+
+  # get uuid for the request
+  rNumber=`uuid`
+
+  # get json with the number of closed trades
+  urlTot="https://www.etoro.com/sapi/trade-data-real/history/public/credit/flat/aggregated?CID=$cid&StartTime="$dDBYesterday"T00:00:00.000Z&format=json&client_request_id="$rNumber
+  retValCurl=`curl -b $inFileCookie -s "$urlTot"`
+
+  # check output
+  if [[ "$retValCurl" != *"TotalClosedTrades"* ]]; then
+   revertAndTerminate
+  fi
+
+  # filter out the number of closed trade
+  nrCTrades=${retValCurl%%\,\"TotalClosedManualPositions\"*}
+  nrCTrades=${nrCTrades##\{\"TotalClosedTrades\":}
+
+  # reset closed trades file
+  rmFile $outFileCTrades
+  touch $outFileCTrades
+
+  # get the closed trades
+  pageNr=1
+  nrCTradesLeft=$nrCTrades
+  while [ $nrCTradesLeft -ge 0 ]; do
+    # get uuid for the request
+    rNumber=`uuid`
+    urlTot="https://www.etoro.com/sapi/trade-data-real/history/public/credit/flat?CID="$cid"&ItemsPerPage=30&PageNumber="$pageNr"&StartTime="$dDBYesterday"T00:00:00.000Z&format=json&client_request_id="$rNumber
+    retValCurl=`curl -b $inFileCookie -s "$urlTot"`
+  
+    # update counters
+    nrCTradesLeft=$((nrCTradesLeft-30))
+    pageNr=$(($pageNr+1))
+
+    # Daten prüfen
+    if [[ "$retValCurl" != *"PublicHistoryPositions"* ]]; then
+      revertAndTerminate
+    fi
+
+    # Daten extrahieren  
+    fContent=$retValCurl
+    fContent=${fContent%%\}]\}}
+    fContent=${fContent##*PublicHistoryPositions\":[{}
+
+    for asset in $(echo $fContent | sed 's/},{/\n/g'); do
+      echo $asset >> $outFileCTrades
+    done
+  done
+}
+
+###############################################################################################
+# Prüft, ob trades wirklich geschlossen sind
+
+checkPCloseTrades() {
+  if [ -f "$outFilePosClose" ]; then
+
+    # get the real closed positions
+    getCTrades
+
+    # möglicherweise geschlossene trades in temp file überführen
+    mv $outFilePosClose $outFilePosClose"_tmp"
+
+    # check each possibly closed position
+    while read line; do
+       # get the Position number
+       posNr=${line##\"PositionID\":}
+       posNr=${posNr%%,\"CID*}
+
+       # search position in the real closed trades
+       posClosed=`grep "$posNr" "$outFileCTrades"`
+       if [ "$?" -eq "0" ]; then
+          # position gefunden daher wirklich beendeter trade
+          echo $line >> $outFilePosClose
+       else
+          # position nicht gefunde, daher weiterhin offener trade
+          echo "Position not closed..."
+          echo $line >> $outFileNew
+          nrNotFoundClosedPos=$((nrNotFoundClosedPos+1))
+       fi   
+    done <$outFilePosClose"_tmp"
+
+    # clean up
+    rmFile $outFilePosClose"_tmp"
+  fi
+}
+
+
 
 ###############################################################################################
 # Meldungen generieren
@@ -223,13 +374,21 @@ lineToMessage () {
   local time=${time#*\:}
   local open=`echo $pos | awk -F "," '{print $4}'`
   local bsType=`echo $pos | awk -F "," '{print $6}'`
-  if [[ $bsType == *"true"* ]]; then bs="long"; else bs="short"; fi
+  if [[ $bsType == *"true"* ]]; then 
+     bs="long"; 
+     bsp=1; 
+  else 
+     bs="short"; 
+     bsp=-1; 
+  fi
   local tp=`echo $pos | awk -F "," '{print $7}'`
   local cr=`echo $pos | awk -F "," '{print $12}'`
   local sl=`echo $pos | awk -F "," '{print $8}'`
   local levarage=`echo $pos | awk -F "," '{print $16}'`
   local np=`echo $pos | awk -F "," '{print $14}'`
   local np2=${np##*\:}
+  local amount=`echo $pos | awk -F "," '{print $11}'`
+  amount=${amount##*\:}
 
   # asset nummer in asset name wandeln
   local asset=`grep -m1 "${assetnr##*\:}" "$inFileAsset"`
@@ -239,21 +398,38 @@ lineToMessage () {
   fi   
   asset=${asset##*,} 
 
-  
+  open=${open##*\:}
+  tp=${tp##*\:}
+  cr=${cr##*\:}
+  sl=${sl##*\:}
+  levarage=${levarage##*\:}
+
+  local tpp=`echo "scale=10;$bsp*100*($tp-$open)/$open*$levarage" | bc`
+  local crp=`echo "scale=10;$bsp*100*($cr-$open)/$open*$levarage" | bc`	
+  local slp=`echo "scale=10;$bsp*100*($sl-$open)/$open*$levarage" | bc`
+
+  # check for extended stop loss
+  slpRound=`echo "($slp-0.5)/1" | bc`
+  if [[ $slpRound -le -100 ]]; then
+    crp=`echo "scale=10;-100*$crp/$slp" | bc`
+  fi
+ 
+
   cat >>$outFileMsg"_"$(printf "%03d" $index) << EOF
 ********************
 <b>$msgTyp</b> $bs position
   Time:	${time:1:16}
   Asset:	$asset
-  open:	${open##*\:}
-  TP:	${tp##*\:}
-  CR:   ${cr##*\:}
-  SL:	${sl##*\:}
+  open:	$open
+  TP: 	$tp   (${tpp%%.*} %)
+  CR:   $cr   (${crp%%.*} %)
+  SL: 	$sl   (${slp%%.*} %)
   Levarage:	${levarage##*\:}
-  NP:	${np2:0:10}
+  Amount:   ${amount:0:4} %
 EOF
-}
+#  NP:	${np2:0:10}
 
+}
 
 # Aus Datei mit Positionen Meldungen erstellen
 msgFromFile () {
@@ -267,8 +443,8 @@ if [ -f "$fName" ]; then
     cat>>$outFileMsg"_000" << EOL
 ####################
 Position changed
-  Trader:$trader
-  Date:  $datum
+  Trader: $trader
+  Date:   $datum
 ####################
 EOL
   fi
@@ -325,6 +501,9 @@ msgSend () {
     done
     if [ "$silentMode" == "false" ]; then
       ./telegram -t $tgAPI -c $tgcID "Portfolio:https://www.etoro.com/people/$trader/portfolio"$'\n'"Donate for bot to: paypal.me/ChristianSenning"
+      if [ "$nrNotFoundClosedPos" -ne "0" ]; then
+        ./telegram -t $tgAPI -c $tgcID "Maintenance message: Possibly closed position found."
+      fi
     fi
   fi
 }
@@ -342,6 +521,13 @@ lockFileGen () {
   # lockfile erstellen mit der aktuellen Ausführzeit
   date > $outFileLock
 
+}
+
+###############################################################################################
+# Sicherstellen, dass alle benötigten Dateien vorhanden sind
+initFiles () {
+  touch $outFileNew
+  touch $outFileOld
 }
 
 
@@ -365,8 +551,15 @@ while [ -n "$1" ]; do # while loop starts
     shift
 done
 
-# Konfiguration laden
+# standard Konfiguration laden
+getStdConf
+
+# spezifische Konfiguration laden
 source eToroSBot.conf
+
+# Initialisiere die Dateien
+initFiles
+
 
 # Sicherstellen, dass nur einmal ausgeführt und nicht ausführen nach einem Fehler
 lockFileGen
@@ -379,6 +572,9 @@ fetchEToroData "$outFileNew"
 
 # Veränderung der Positionen suchen
 identDifference 
+
+# geschlossene Trades prüfen
+checkPCloseTrades
 
 # Meldungen erstellen
 msgCreate 
