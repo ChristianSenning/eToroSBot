@@ -70,7 +70,8 @@ curlCrawl () {
     else
        echo "Maintenance message: New cookie required. Pausing bot."
     fi
-    revertAndTerminate
+    cp "$outFileOld" "$outFileNew"
+    exit 1
   fi 
 
   # Check on error message of eToro
@@ -134,9 +135,17 @@ fetchEToroData() {
   # Leerer File sicherstellen
   rmFile "$outFile"
 
-  # falls positionen vorhanden sind
+  # sicherstellen, dass positionen vorhanden sind
   if [[ "$retValCurlCrawl" == *"\"AggregatedPositions\":[]"* ]]; then
     echo "Empty portfolio"
+    # lockfile entfernen
+    rmFile $outFileLock
+    exit 0
+  fi
+
+  # sicherstellen, dass kein Fehler vorhanden ist
+  if [[ "$retValCurlCrawl" == *"ErrorCode"* ]]; then
+    echo "Empty portfolio with error code"
     # lockfile entfernen
     rmFile $outFileLock
     exit 0
@@ -405,15 +414,7 @@ lineToMessage () {
   levarage=${levarage##*\:}
 
   local tpp=`echo "scale=10;$bsp*100*($tp-$open)/$open*$levarage" | bc`
-  local crp=`echo "scale=10;$bsp*100*($cr-$open)/$open*$levarage" | bc`	
   local slp=`echo "scale=10;$bsp*100*($sl-$open)/$open*$levarage" | bc`
-
-  # check for extended stop loss
-  slpRound=`echo "($slp-0.5)/1" | bc`
-  if [[ $slpRound -le -100 ]]; then
-    crp=`echo "scale=10;-100*$crp/$slp" | bc`
-  fi
- 
 
   cat >>$outFileMsg"_"$(printf "%03d" $index) << EOF
 ********************
@@ -421,9 +422,9 @@ lineToMessage () {
   Time:	${time:1:16}
   Asset:	$asset
   open:	$open
-  TP: 	$tp   (${tpp%%.*} %)
-  CR:   $cr   (${crp%%.*} %)
-  SL: 	$sl   (${slp%%.*} %)
+  TP: 	$tp   (${tpp:0:7} %)
+  CR:   $cr   (${np2:0:7} %)
+  SL: 	$sl   (${slp:0:7} %)
   Levarage:	${levarage##*\:}
   Amount:   ${amount:0:4} %
 EOF
