@@ -43,7 +43,7 @@ curlCrawl () {
   while [ $fetchWorked -eq 0 -a $lCount -le $lMax ]; do
 
     # get a unique number for the request
-    local rNumber=`uuid`
+    local rNumber=`cat /proc/sys/kernel/random/uuid`
  
     # assemble the url for the request
     local urlTot="$url&client_request_id=$rNumber"
@@ -223,9 +223,9 @@ identDifference () {
   inFileOld="$outFileOld"
 
   # Temporäre Dateien erstellen
-  tmpFilePosNew=`tempfile -d $tmpDir`
-  tmpFilePosOld=`tempfile -d $tmpDir`
-  tmpFilePosDiff=`tempfile -d $tmpDir`
+  tmpFilePosNew="$tmpDir/newPos.tmp"
+  tmpFilePosOld="$tmpDir/oldPos.tmp"
+  tmpFilePosDiff="$tmpDir/diffPos.tmp"
 
   # positionsnummern extrahieren
   sort "$inFileNew" | awk -F "," '{print $1}' > "$tmpFilePosNew"
@@ -283,7 +283,7 @@ getCTrades() {
   dDBYesterday=`date -d "2 day ago" '+%Y-%m-%d'`
 
   # get uuid for the request
-  rNumber=`uuid`
+  rNumber=`cat /proc/sys/kernel/random/uuid`
 
   # get json with the number of closed trades
   urlTot="https://www.etoro.com/sapi/trade-data-real/history/public/credit/flat/aggregated?CID=$cid&StartTime="$dDBYesterday"T00:00:00.000Z&format=json&client_request_id="$rNumber
@@ -307,7 +307,7 @@ getCTrades() {
   nrCTradesLeft=$nrCTrades
   while [ $nrCTradesLeft -ge 0 ]; do
     # get uuid for the request
-    rNumber=`uuid`
+    rNumber=`cat /proc/sys/kernel/random/uuid`
     urlTot="https://www.etoro.com/sapi/trade-data-real/history/public/credit/flat?CID="$cid"&ItemsPerPage=30&PageNumber="$pageNr"&StartTime="$dDBYesterday"T00:00:00.000Z&format=json&client_request_id="$rNumber
     retValCurl=`curl -b $inFileCookie -s "$urlTot"`
   
