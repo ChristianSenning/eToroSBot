@@ -27,6 +27,7 @@ getStdConf () {
   # parameters
   maxHOpen=1
   nrNotFoundClosedPos=0
+  verbosityLevel=0
 }
 
 
@@ -584,7 +585,9 @@ msgCreate
 msgSend
 
 # Kopiere alle positionen ins log verzeichnis
-cp "$outFileNew" "$logDir/`date "+%g%m%d__%H_%M"`"
+if [ "$verbosityLevel" -gt "0" ]; then
+  cp "$outFileNew" "$logDir/`date "+%g%m%d__%H_%M"`"
+fi
 
 # lockfile entfernen
 rmFile $outFileLock
