@@ -27,7 +27,6 @@ getStdConf () {
   # parameters
   maxHOpen=1
   nrNotFoundClosedPos=0
-  verbosityLevel=0
 }
 
 
@@ -44,7 +43,7 @@ curlCrawl () {
   while [ $fetchWorked -eq 0 -a $lCount -le $lMax ]; do
 
     # get a unique number for the request
-    local rNumber=`cat /proc/sys/kernel/random/uuid`
+    local rNumber=`uuid`
  
     # assemble the url for the request
     local urlTot="$url&client_request_id=$rNumber"
@@ -137,11 +136,10 @@ fetchEToroData() {
   rmFile "$outFile"
 
   # sicherstellen, dass positionen vorhanden sind
+  emptyPortfolio=0
   if [[ "$retValCurlCrawl" == *"\"AggregatedPositions\":[]"* ]]; then
     echo "Empty portfolio"
-    # lockfile entfernen
-    rmFile $outFileLock
-    exit 0
+    emptyPortfolio=1
   fi
 
   # sicherstellen, dass kein Fehler vorhanden ist
@@ -152,40 +150,43 @@ fetchEToroData() {
     exit 0
   fi
 
-  # ausschliesslich die AggregatedPositions herausfiltern
-  fContent=$retValCurlCrawl
-  fContent=${fContent%%\}],\"AggregatedMirrors*}
-  fContent=${fContent##*AggregatedPositions\":[{}
+  if [[ "$emptyPortfolio" == "0" ]]; then
 
-  # jede Asset Klasse durchgehen und alle entsprechenden Trades holen
-  for assetClass in $(echo $fContent | sed 's/},{/\n/g'); do
-    # Asset Nummer extrahieren
-    assetClass=${assetClass%%,\"Direction*}
-    assetClass=${assetClass##\"InstrumentID\":}
-  
-    # URL zusammensetzen
-    url=$baseAUrl$assetClass"&cid="$cid
-
-    # Daten abgreifen
-    curlCrawl "$url"
-
-    # Daten prüfen
-    if [[ "$retValCurlCrawl" != *"PublicPositions"* ]]; then
-       echo $retValCurlCrawl
-       echo "Fetch of position did not work. Pausing bot"
-       revertAndTerminate
-    fi
-
-    # Daten extrahieren  
+    # ausschliesslich die AggregatedPositions herausfiltern
     fContent=$retValCurlCrawl
-    fContent=${fContent%%\}]\}}
-    fContent=${fContent##*PublicPositions\":[{}
+    fContent=${fContent%%\}],\"AggregatedMirrors*}
+    fContent=${fContent##*AggregatedPositions\":[{}
 
-    for asset in $(echo $fContent | sed 's/},{/\n/g'); do
-      echo $asset >> $outFile
+    # jede Asset Klasse durchgehen und alle entsprechenden Trades holen
+    for assetClass in $(echo $fContent | sed 's/},{/\n/g'); do
+      # Asset Nummer extrahieren
+      assetClass=${assetClass%%,\"Direction*}
+      assetClass=${assetClass##\"InstrumentID\":}
+  
+      # URL zusammensetzen
+      url=$baseAUrl$assetClass"&cid="$cid
+
+      # Daten abgreifen
+      curlCrawl "$url"
+
+      # Daten prüfen
+      if [[ "$retValCurlCrawl" != *"PublicPositions"* ]]; then
+         echo $retValCurlCrawl
+         echo "Fetch of position did not work. Pausing bot"
+         revertAndTerminate
+      fi
+
+      # Daten extrahieren  
+      fContent=$retValCurlCrawl
+      fContent=${fContent%%\}]\}}
+      fContent=${fContent##*PublicPositions\":[{}
+
+      for asset in $(echo $fContent | sed 's/},{/\n/g'); do
+        echo $asset >> $outFile
+      done
+
     done
-
-  done
+  fi
 
   # assure that each line is a resonable line. To this end I check for a key word
   touch $outFile 
@@ -224,9 +225,9 @@ identDifference () {
   inFileOld="$outFileOld"
 
   # Temporäre Dateien erstellen
-  tmpFilePosNew="$tmpDir/newPos.tmp"
-  tmpFilePosOld="$tmpDir/oldPos.tmp"
-  tmpFilePosDiff="$tmpDir/diffPos.tmp"
+  tmpFilePosNew=`tempfile -d $tmpDir`
+  tmpFilePosOld=`tempfile -d $tmpDir`
+  tmpFilePosDiff=`tempfile -d $tmpDir`
 
   # positionsnummern extrahieren
   sort "$inFileNew" | awk -F "," '{print $1}' > "$tmpFilePosNew"
@@ -284,7 +285,7 @@ getCTrades() {
   dDBYesterday=`date -d "2 day ago" '+%Y-%m-%d'`
 
   # get uuid for the request
-  rNumber=`cat /proc/sys/kernel/random/uuid`
+  rNumber=`uuid`
 
   # get json with the number of closed trades
   urlTot="https://www.etoro.com/sapi/trade-data-real/history/public/credit/flat/aggregated?CID=$cid&StartTime="$dDBYesterday"T00:00:00.000Z&format=json&client_request_id="$rNumber
@@ -308,7 +309,7 @@ getCTrades() {
   nrCTradesLeft=$nrCTrades
   while [ $nrCTradesLeft -ge 0 ]; do
     # get uuid for the request
-    rNumber=`cat /proc/sys/kernel/random/uuid`
+    rNumber=`uuid`
     urlTot="https://www.etoro.com/sapi/trade-data-real/history/public/credit/flat?CID="$cid"&ItemsPerPage=30&PageNumber="$pageNr"&StartTime="$dDBYesterday"T00:00:00.000Z&format=json&client_request_id="$rNumber
     retValCurl=`curl -b $inFileCookie -s "$urlTot"`
   
@@ -585,9 +586,7 @@ msgCreate
 msgSend
 
 # Kopiere alle positionen ins log verzeichnis
-if [ "$verbosityLevel" -gt "0" ]; then
-  cp "$outFileNew" "$logDir/`date "+%g%m%d__%H_%M"`"
-fi
+cp "$outFileNew" "$logDir/`date "+%g%m%d__%H_%M"`"
 
 # lockfile entfernen
 rmFile $outFileLock
