@@ -20,7 +20,7 @@ So far the bot is in beta state. It has not been extensively tested.
 2. eToroSBot.conf: the configuration file of the bot. Essentially just another script in which all configuration variables are defined
 3. telegram: an unchanged fork of `https://github.com/fabianonline/telegram.sh`, that sends the messages to telegram
 4. asset.txt: a list of all assets on eToro. The bot used this list as lookup table to get human readable asset names. The list is generated based on this link: https://api.etorostatic.com/sapi/instrumentsmetadata/V1.1/instruments
-5. cid.txt: a list of traders with their client id from eToro. The cid can be found on the page of a trader `https://www.etoro.com/people/$TRADER` when you search for `https://etoro-cdn.etorostatic.com/avatars/150X150/` the next number is the cid.
+5. cid.txt: a list of traders with their client id from eToro. 
 6. a cookie file: a file with cookies, that you have to generate yourself. Personally I use the Firefox addon `cookies.txt`
 
 # Which are the dependencies of the bot
