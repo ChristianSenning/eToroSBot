@@ -102,6 +102,35 @@ revertAndTerminate() {
 
 
 ###############################################################################################
+# Cid von eToro oder aus lokale Datei holen
+
+getCidfFileOrUpdate () {
+  # check if cid is already known
+  cid=`grep "$trader" "$inFileCid"`
+  if [ "$?" -ne "0" ]; then
+     echo "Info: fetching cid from etoro directly"
+     # fetch trader information
+     urlTot="https://www.etoro.com/api/logininfo/v1.1/users/$trader"
+     traderInfo=`curl -b $inFileCookie -s "$urlTot"`
+
+     # extract cid
+     cid=`echo $traderInfo | awk -F "," '{print $2}' | awk -F ":" '{print $2}'`
+
+     # check cid (should be a number with multiple digits)
+     if [[ $cid == +([0-9]) ]]; then 
+        echo \"$trader\",$cid >> $inFileCid
+     else
+       echo "Error: Configuration error, trader not found"
+   #    ./telegram -t $tgAPI -c $tgcID "Error message: Configuration error. Pausing bot."
+       exit 1
+     fi
+  else
+    cid=${cid##*,}
+  fi   
+}
+
+
+###############################################################################################
 # Daten von eToro holen
 
 fetchEToroData() {
@@ -110,14 +139,8 @@ fetchEToroData() {
   basePUrl="https://www.etoro.com/sapi/trade-data-real/live/public/portfolios?format=json&cid="
   baseAUrl="https://www.etoro.com/sapi/trade-data-real/live/public/positions?format=json&InstrumentID="
 
-  # fetch cid from config list
-  cid=`grep "$trader" "$inFileCid"`
-  if [ "$?" -ne "0" ]; then
-    echo "Error: Configuration error, trader not found"
-    ./telegram -t $tgAPI -c $tgcID "Error message: Configuration error. Pausing bot."
-    exit 1
-  fi   
-  cid=${cid##*,}
+  # fetch cid from config list or from eToro
+  getCidfFileOrUpdate
 
   # URL zusammensetzen
   url="$basePUrl$cid"
